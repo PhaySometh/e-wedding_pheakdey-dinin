@@ -164,14 +164,21 @@ body {
   font-size: 1.5rem;
 }
 
-/* Fade-in animations */
+/* Fade-in animations - GSAP handles initial state */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
+  /* GSAP sets opacity:0 via JavaScript - this ensures visibility */
+  visibility: inherit;
 }
 
+/* Fallback for no-JavaScript or when GSAP is not used */
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
   transition: all 0.8s ease-out;
+}
+
+/* Add visibility for elements that should always be visible */
+.always-visible {
+  opacity: 1 !important;
+  transform: none !important;
 }

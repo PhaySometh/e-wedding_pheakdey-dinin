@@ -1,16 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import GateAnimation from '../components/GateAnimation.astro';
-import Hero from '../components/Hero.astro';
-import ParentsSection from '../components/ParentsSection.astro';
-import EventDetails from '../components/EventDetails.astro';
-import Timeline from '../components/Timeline.astro';
-import RSVP from '../components/RSVP.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import GateAnimation from "../components/GateAnimation.astro";
+import Hero from "../components/Hero.astro";
+import ParentsSection from "../components/ParentsSection.astro";
+import EventDetails from "../components/EventDetails.astro";
+import Timeline from "../components/Timeline.astro";
+import GratitudeApology from "../components/GratitudeApology.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout 
-  title="Pheakdey & Dinin Wedding Invitation - ភក្តី និង ឌីនីន" 
+<Layout
+  title="Pheakdey & Dinin Wedding Invitation - ភក្តី និង ឌីនីន"
   description="Join us in celebrating the wedding of Lmut Pheakdey & Srorn Dinin on February 27, 2026 at Koh Dach Village, Phnom Penh"
 >
   <!-- Gate Animation -->
@@ -30,8 +30,8 @@ import Footer from '../components/Footer.astro';
     <!-- Timeline Section -->
     <Timeline />
 
-    <!-- RSVP Section -->
-    <RSVP />
+    <!-- Gratitude & Apology Section -->
+    <GratitudeApology />
 
     <!-- Footer -->
     <Footer />
@@ -39,87 +39,117 @@ import Footer from '../components/Footer.astro';
 
   <!-- Optional: Background Music Player -->
   <div id="music-player" class="fixed bottom-24 right-8 z-40 group">
-    <button 
-      id="music-toggle" 
+    <button
+      id="music-toggle"
       class="bg-gradient-to-br from-[#FFD700] to-[#D4AF37] hover:from-[#D4AF37] hover:to-[#B8860B] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 border-2 border-white"
       aria-label="Toggle music"
       title="Play wedding music"
     >
-      <svg id="play-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+      <svg
+        id="play-icon"
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+        ></path>
       </svg>
-      <svg id="pause-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M5.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75A.75.75 0 007.25 3h-1.5zM12.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75h-1.5z" />
+      <svg
+        id="pause-icon"
+        class="w-6 h-6 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M5.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75A.75.75 0 007.25 3h-1.5zM12.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75h-1.5z"
+        ></path>
       </svg>
       <!-- Sound waves animation -->
       <div id="sound-waves" class="absolute -top-1 -right-1 hidden">
         <div class="flex space-x-1">
           <div class="w-1 h-3 bg-white rounded-full animate-pulse"></div>
-          <div class="w-1 h-4 bg-white rounded-full animate-pulse" style="animation-delay: 0.1s;"></div>
-          <div class="w-1 h-3 bg-white rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+          <div
+            class="w-1 h-4 bg-white rounded-full animate-pulse"
+            style="animation-delay: 0.1s;"
+          >
+          </div>
+          <div
+            class="w-1 h-3 bg-white rounded-full animate-pulse"
+            style="animation-delay: 0.2s;"
+          >
+          </div>
         </div>
       </div>
     </button>
-    
+
     <!-- Music label -->
-    <div class="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-      <div class="bg-white px-3 py-2 rounded-lg shadow-lg border border-[#D4AF37]">
-        <p class="text-xs font-eng text-[#8B4513] whitespace-nowrap">Traditional Music</p>
+    <div
+      class="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+    >
+      <div
+        class="bg-white px-3 py-2 rounded-lg shadow-lg border border-[#D4AF37]"
+      >
+        <p class="text-xs font-eng text-[#8B4513] whitespace-nowrap">
+          Traditional Music
+        </p>
       </div>
     </div>
 
     <audio id="wedding-music" loop preload="none">
-      <source src="/music/wedding-song.mp3" type="audio/mpeg">
+      <source src="/music/wedding-song.mp3" type="audio/mpeg" />
     </audio>
   </div>
 </Layout>
 
 <script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
 
   // Music player functionality
-  const musicToggle = document.getElementById('music-toggle');
-  const weddingMusic = document.getElementById('wedding-music') as HTMLAudioElement;
-  const playIcon = document.getElementById('play-icon');
-  const pauseIcon = document.getElementById('pause-icon');
-  const soundWaves = document.getElementById('sound-waves');
+  const musicToggle = document.getElementById("music-toggle");
+  const weddingMusic = document.getElementById(
+    "wedding-music",
+  ) as HTMLAudioElement;
+  const playIcon = document.getElementById("play-icon");
+  const pauseIcon = document.getElementById("pause-icon");
+  const soundWaves = document.getElementById("sound-waves");
 
   if (musicToggle && weddingMusic && playIcon && pauseIcon) {
     let isPlaying = false;
 
-    musicToggle.addEventListener('click', () => {
+    musicToggle.addEventListener("click", () => {
       if (isPlaying) {
         weddingMusic.pause();
-        playIcon?.classList.remove('hidden');
-        pauseIcon?.classList.add('hidden');
-        soundWaves?.classList.add('hidden');
+        playIcon?.classList.remove("hidden");
+        pauseIcon?.classList.add("hidden");
+        soundWaves?.classList.add("hidden");
         isPlaying = false;
       } else {
         weddingMusic.play().catch((error) => {
-          console.log('Audio playback failed:', error);
+          console.log("Audio playback failed:", error);
         });
-        playIcon?.classList.add('hidden');
-        pauseIcon?.classList.remove('hidden');
-        soundWaves?.classList.remove('hidden');
+        playIcon?.classList.add("hidden");
+        pauseIcon?.classList.remove("hidden");
+        soundWaves?.classList.remove("hidden");
         isPlaying = true;
       }
     });
   }
 
   // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
+      const targetId = this.getAttribute("href");
       if (targetId) {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            behavior: "smooth",
+            block: "start",
           });
         }
       }
@@ -127,12 +157,14 @@ import Footer from '../components/Footer.astro';
   });
 
   // Parallax effect on scroll
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
-    
+    const parallaxElements = document.querySelectorAll("[data-parallax]");
+
     parallaxElements.forEach((element) => {
-      const speed = parseFloat((element as HTMLElement).dataset.parallax || '0.5');
+      const speed = parseFloat(
+        (element as HTMLElement).dataset.parallax || "0.5",
+      );
       const yPos = -(scrolled * speed);
       (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
     });
@@ -141,31 +173,31 @@ import Footer from '../components/Footer.astro';
   // Add intersection observer for fade-in animations
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
       }
     });
   }, observerOptions);
 
   // Observe all fade-in elements
-  document.querySelectorAll('.fade-in').forEach((element) => {
+  document.querySelectorAll(".fade-in").forEach((element) => {
     observer.observe(element);
   });
 
   // Loading complete - show main content after gate animation
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     setTimeout(() => {
-      const mainContent = document.getElementById('main-content');
+      const mainContent = document.getElementById("main-content");
       if (mainContent) {
         gsap.to(mainContent, {
           opacity: 1,
           duration: 0.5,
-          ease: 'power2.out'
+          ease: "power2.out",
         });
       }
     }, 2500);
@@ -173,27 +205,32 @@ import Footer from '../components/Footer.astro';
 
   // Preload images for better performance
   const preloadImages = () => {
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll("img[data-src]");
     images.forEach((img) => {
-      const src = img.getAttribute('data-src');
+      const src = img.getAttribute("data-src");
       if (src) {
-        img.setAttribute('src', src);
+        img.setAttribute("src", src);
       }
     });
   };
 
-  if (document.readyState === 'complete') {
+  if (document.readyState === "complete") {
     preloadImages();
   } else {
-    window.addEventListener('load', preloadImages);
+    window.addEventListener("load", preloadImages);
   }
 </script>
 
 <style>
   /* Additional custom animations */
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   .animate-float {
@@ -211,17 +248,17 @@ import Footer from '../components/Footer.astro';
   }
 
   ::-webkit-scrollbar-track {
-    background: #FFF8DC;
+    background: #fff8dc;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #FFD700, #D4AF37);
+    background: linear-gradient(to bottom, #ffd700, #d4af37);
     border-radius: 6px;
-    border: 2px solid #FFF8DC;
+    border: 2px solid #fff8dc;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #D4AF37, #B8860B);
+    background: linear-gradient(to bottom, #d4af37, #b8860b);
   }
 
   /* Ensure main content is hidden initially */
@@ -229,4 +266,3 @@ import Footer from '../components/Footer.astro';
     opacity: 0;
   }
 </style>
-

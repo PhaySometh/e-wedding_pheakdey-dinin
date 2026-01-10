@@ -1,14 +1,15 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
 	title?: string;
 	description?: string;
 }
 
-const { 
-	title = 'Pheakdey & Dinin Wedding Invitation',
-	description = 'Join us in celebrating the wedding of Lmut Pheakdey & Srorn Dinin on February 27, 2026 at Koh Dach Village, Phnom Penh'
+const {
+	title = "Pheakdey & Dinin Wedding Invitation",
+	description = "Join us in celebrating the wedding of Lmut Pheakdey & Srorn Dinin on February 27, 2026 at Koh Dach Village, Phnom Penh",
+	// Forced rebuild
 } = Astro.props;
 ---
 
@@ -20,7 +21,7 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		
+
 		<!-- Open Graph Meta Tags for Social Sharing -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
@@ -30,55 +31,83 @@ const {
 		<meta property="og:image:height" content="630" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:locale:alternate" content="km_KH" />
-		
+
 		<!-- Twitter Card Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content="/og-image.jpg" />
-		
+
 		<!-- Additional Meta -->
 		<meta name="description" content={description} />
-		<meta name="keywords" content="wedding, cambodian wedding, Pheakdey, Dinin, 2026, Phnom Penh, Koh Dach" />
-		
+		<meta
+			name="keywords"
+			content="wedding, cambodian wedding, Pheakdey, Dinin, 2026, Phnom Penh, Koh Dach"
+		/>
+
 		<!-- Preload critical fonts -->
-		<link rel="preload" href="/fonts/Moul.ttf" as="font" type="font/ttf" crossorigin />
-		<link rel="preload" href="/fonts/KhKantumruy-Regular.ttf" as="font" type="font/ttf" crossorigin />
-		<link rel="preload" href="/fonts/GoogleSans-Regular.ttf" as="font" type="font/ttf" crossorigin />
+		<link
+			rel="preload"
+			href="/fonts/Moul.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/KhKantumruy-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/GoogleSans-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
 	</head>
 	<body class="antialiased">
 		<slot />
-		
+
 		<!-- Back to top button -->
-		<button 
-			id="back-to-top" 
+		<button
+			id="back-to-top"
 			class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] text-white rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 z-40 flex items-center justify-center border-2 border-white"
 			aria-label="Back to top"
 		>
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<path d="M12 19V5M5 12l7-7 7 7"/>
+			<svg
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+			>
+				<path d="M12 19V5M5 12l7-7 7 7"></path>
 			</svg>
 		</button>
 
 		<script>
 			// Back to top button functionality
-			const backToTopButton = document.getElementById('back-to-top');
-			
+			const backToTopButton = document.getElementById("back-to-top");
+
 			if (backToTopButton) {
-				window.addEventListener('scroll', () => {
+				window.addEventListener("scroll", () => {
 					if (window.scrollY > 500) {
-						backToTopButton.style.opacity = '1';
-						backToTopButton.style.pointerEvents = 'auto';
+						backToTopButton.style.opacity = "1";
+						backToTopButton.style.pointerEvents = "auto";
 					} else {
-						backToTopButton.style.opacity = '0';
-						backToTopButton.style.pointerEvents = 'none';
+						backToTopButton.style.opacity = "0";
+						backToTopButton.style.pointerEvents = "none";
 					}
 				});
 
-				backToTopButton.addEventListener('click', () => {
+				backToTopButton.addEventListener("click", () => {
 					window.scrollTo({
 						top: 0,
-						behavior: 'smooth'
+						behavior: "smooth",
 					});
 				});
 			}
