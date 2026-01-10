@@ -51,7 +51,7 @@
   </div>
 
   <!-- Main Content -->
-  <div class="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto">
+  <div class="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto py-12 md:py-16 lg:py-24 xl:py-32">
     <!-- Invitation Title in Khmer -->
     <div class="fade-in mb-12 md:mb-16" id="hero-title">
       <h1
@@ -75,95 +75,58 @@
           fill="none"></path>
         <circle cx="50" cy="22" r="4" fill="#FFD700"></circle>
         <circle cx="100" cy="30" r="6" fill="#D4AF37"></circle>
-        <circle cx="150" cy="22" r="4" fill="#FFD700"></circle>
-        <path
-          d="M 90 30 L 95 40 L 100 30 L 105 40 L 110 30"
-          stroke="#B8860B"
-          stroke-width="1.5"
-          fill="none"></path>
+        <circle cx="150" cy="37" r="4" fill="#FFD700"></circle>
       </svg>
     </div>
 
-    <!-- Couple Names in Khmer -->
-    <div class="fade-in mb-8 md:mb-12" id="hero-names-khmer">
+    <!-- Monogram/Logo Image -->
+    <div class="fade-in my-10 md:my-12" id="hero-monogram">
+      <div class="inline-block relative">
+        <img 
+          src="/photos/initial_text_with_frame.png" 
+          alt="Couple Monogram" 
+          class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 mx-auto object-contain drop-shadow-2xl"
+        />
+      </div>
+    </div>
+
+    <!-- Couple Names -->
+    <div class="fade-in mb-8 md:mb-10" id="hero-names">
+      <!-- First Person -->
       <h2
         class="text-3xl md:text-5xl lg:text-6xl font-khmer-display text-[#8B0000] mb-2"
-        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);"
+        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3); line-height: 1.8; padding: 0.5rem 0;"
       >
         ល្មុត ភក្តី
       </h2>
-      <div class="flex items-center justify-center my-4">
-        <div
-          class="h-px w-16 md:w-24 bg-gradient-to-r from-transparent to-[#D4AF37]"
-        >
-        </div>
-        <span class="mx-4 text-3xl md:text-4xl text-[#D4AF37]">❖</span>
-        <div
-          class="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-[#D4AF37]"
-        >
-        </div>
-      </div>
-      <h2
-        class="text-3xl md:text-5xl lg:text-6xl font-khmer-display text-[#8B0000]"
-        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);"
-      >
-        ស្រ៊ន ឌីនីន
-      </h2>
-    </div>
-
-    <!-- Monogram/Logo -->
-    <div class="fade-in my-12 md:my-16" id="hero-monogram">
-      <div class="inline-block relative">
-        <div
-          class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] flex items-center justify-center shadow-2xl border-4 border-[#FFF8DC] relative"
-        >
-          <div class="text-3xl md:text-5xl font-khmer-display text-white">
-            <span>ភ</span>
-            <span class="text-2xl md:text-3xl">❖</span>
-            <span>ស</span>
-          </div>
-          <!-- Rotating ring animation -->
-          <div
-            class="absolute inset-0 rounded-full border-2 border-[#FFD700] border-dashed animate-spin"
-            style="animation-duration: 20s;"
-          >
-          </div>
-        </div>
-
-        <!-- Decorative corners -->
-        <div
-          class="absolute -top-4 -left-4 text-2xl md:text-3xl text-[#FFD700]"
-        >
-          ✦
-        </div>
-        <div
-          class="absolute -top-4 -right-4 text-2xl md:text-3xl text-[#FFD700]"
-        >
-          ✦
-        </div>
-        <div
-          class="absolute -bottom-4 -left-4 text-2xl md:text-3xl text-[#FFD700]"
-        >
-          ✦
-        </div>
-        <div
-          class="absolute -bottom-4 -right-4 text-2xl md:text-3xl text-[#FFD700]"
-        >
-          ✦
-        </div>
-      </div>
-    </div>
-
-    <!-- Couple Names in English -->
-    <div class="fade-in mb-8 md:mb-12" id="hero-names-english">
       <h3
-        class="text-2xl md:text-4xl font-eng font-semibold text-[#8B4513] tracking-wide"
+        class="text-lg md:text-2xl font-eng font-medium text-[#8B4513] tracking-wide mb-6 md:mb-8"
       >
         Lmut Pheakdey
       </h3>
-      <p class="text-lg md:text-2xl font-eng text-[#D4AF37] my-2">&</p>
+
+      <!-- Divider -->
+      <div class="flex items-center justify-center my-6 md:my-8">
+        <div
+          class="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]"
+        >
+        </div>
+        <span class="mx-3 text-2xl md:text-3xl text-[#D4AF37]">❖</span>
+        <div
+          class="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-[#D4AF37]"
+        >
+        </div>
+      </div>
+
+      <!-- Second Person -->
+      <h2
+        class="text-3xl md:text-5xl lg:text-6xl font-khmer-display text-[#8B0000] mb-2 mt-6 md:mt-8"
+        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3); line-height: 1.8; padding: 0.5rem 0;"
+      >
+        ស្រ៊ន ឌីនីន
+      </h2>
       <h3
-        class="text-2xl md:text-4xl font-eng font-semibold text-[#8B4513] tracking-wide"
+        class="text-lg md:text-2xl font-eng font-medium text-[#8B4513] tracking-wide"
       >
         Srorn Dinin
       </h3>
@@ -189,41 +152,6 @@
           </p>
         </div>
       </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="fade-in mt-16 md:mt-20 animate-bounce" id="hero-scroll">
-      <p
-        class="text-sm md:text-base font-eng text-[#8B4513] mb-2 tracking-widest"
-      >
-        SCROLL DOWN
-      </p>
-      <svg width="30" height="50" viewBox="0 0 30 50" class="mx-auto">
-        <rect
-          x="10"
-          y="5"
-          width="10"
-          height="20"
-          rx="5"
-          fill="none"
-          stroke="#D4AF37"
-          stroke-width="2"></rect>
-        <circle cx="15" cy="12" r="2" fill="#D4AF37">
-          <animate
-            attributeName="cy"
-            from="12"
-            to="18"
-            dur="1.5s"
-            repeatCount="indefinite"></animate>
-          <animate
-            attributeName="opacity"
-            from="1"
-            to="0.3"
-            dur="1.5s"
-            repeatCount="indefinite"></animate>
-        </circle>
-        <path d="M 15 35 L 10 40 L 15 45 L 20 40 Z" fill="#D4AF37"></path>
-      </svg>
     </div>
   </div>
 
@@ -316,17 +244,6 @@
           ease: "power2.out",
         },
         "-=0.3",
-      );
-
-      timeline.from(
-        "#hero-scroll",
-        {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "-=0.2",
       );
     }, 3000);
   });

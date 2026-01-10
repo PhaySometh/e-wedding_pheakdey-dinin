@@ -19,87 +19,36 @@ import Footer from "../components/Footer.astro";
   <!-- Main Content -->
   <main id="main-content" class="opacity-0">
     <!-- Hero Section -->
-    <Hero />
-
-    <!-- Parents Section -->
-    <ParentsSection />
-
-    <!-- Event Details Section -->
-    <EventDetails />
-
-    <!-- Timeline Section -->
-    <Timeline />
-
-    <!-- Gratitude & Apology Section -->
-    <GratitudeApology />
-
-    <!-- Footer -->
-    <Footer />
-  </main>
-
-  <!-- Optional: Background Music Player -->
-  <div id="music-player" class="fixed bottom-24 right-8 z-40 group">
-    <button
-      id="music-toggle"
-      class="bg-gradient-to-br from-[#FFD700] to-[#D4AF37] hover:from-[#D4AF37] hover:to-[#B8860B] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 border-2 border-white"
-      aria-label="Toggle music"
-      title="Play wedding music"
-    >
-      <svg
-        id="play-icon"
-        class="w-6 h-6"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
-        ></path>
-      </svg>
-      <svg
-        id="pause-icon"
-        class="w-6 h-6 hidden"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M5.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75A.75.75 0 007.25 3h-1.5zM12.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75h-1.5z"
-        ></path>
-      </svg>
-      <!-- Sound waves animation -->
-      <div id="sound-waves" class="absolute -top-1 -right-1 hidden">
-        <div class="flex space-x-1">
-          <div class="w-1 h-3 bg-white rounded-full animate-pulse"></div>
-          <div
-            class="w-1 h-4 bg-white rounded-full animate-pulse"
-            style="animation-delay: 0.1s;"
-          >
-          </div>
-          <div
-            class="w-1 h-3 bg-white rounded-full animate-pulse"
-            style="animation-delay: 0.2s;"
-          >
-          </div>
-        </div>
-      </div>
-    </button>
-
-    <!-- Music label -->
-    <div
-      class="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-    >
-      <div
-        class="bg-white px-3 py-2 rounded-lg shadow-lg border border-[#D4AF37]"
-      >
-        <p class="text-xs font-eng text-[#8B4513] whitespace-nowrap">
-          Traditional Music
-        </p>
-      </div>
+    <div class="section-animate">
+      <Hero />
     </div>
 
-    <audio id="wedding-music" loop preload="none">
-      <source src="/music/wedding-song.mp3" type="audio/mpeg" />
-    </audio>
-  </div>
+    <!-- Parents Section -->
+    <div class="section-animate">
+      <ParentsSection />
+    </div>
+
+    <!-- Event Details Section -->
+    <div class="section-animate">
+      <EventDetails />
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="section-animate">
+      <Timeline />
+    </div>
+
+    <!-- Gratitude & Apology Section -->
+    <div class="section-animate">
+      <GratitudeApology />
+    </div>
+
+    <!-- Footer -->
+    <div class="section-animate">
+      <Footer />
+    </div>
+  </main>
+
 </Layout>
 
 <script>
@@ -108,34 +57,49 @@ import Footer from "../components/Footer.astro";
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Music player functionality
-  const musicToggle = document.getElementById("music-toggle");
-  const weddingMusic = document.getElementById(
-    "wedding-music",
-  ) as HTMLAudioElement;
-  const playIcon = document.getElementById("play-icon");
-  const pauseIcon = document.getElementById("pause-icon");
-  const soundWaves = document.getElementById("sound-waves");
+  // Listen for gate opened event
+  document.addEventListener('gateOpened', () => {
+    // Animate main content entrance
+    const mainContent = document.getElementById("main-content");
+    if (mainContent) {
+      gsap.to(mainContent, {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        onComplete: () => {
+          // After main content fades in, animate each section
+          animateSections();
+        }
+      });
+    }
+  });
 
-  if (musicToggle && weddingMusic && playIcon && pauseIcon) {
-    let isPlaying = false;
-
-    musicToggle.addEventListener("click", () => {
-      if (isPlaying) {
-        weddingMusic.pause();
-        playIcon?.classList.remove("hidden");
-        pauseIcon?.classList.add("hidden");
-        soundWaves?.classList.add("hidden");
-        isPlaying = false;
-      } else {
-        weddingMusic.play().catch((error) => {
-          console.log("Audio playback failed:", error);
-        });
-        playIcon?.classList.add("hidden");
-        pauseIcon?.classList.remove("hidden");
-        soundWaves?.classList.remove("hidden");
-        isPlaying = true;
-      }
+  // Animate sections sequentially
+  function animateSections() {
+    const sections = document.querySelectorAll('.section-animate');
+    
+    sections.forEach((section, index) => {
+      gsap.fromTo(section,
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.95
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          delay: index * 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            end: 'top 20%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
     });
   }
 
@@ -187,20 +151,6 @@ import Footer from "../components/Footer.astro";
   // Observe all fade-in elements
   document.querySelectorAll(".fade-in").forEach((element) => {
     observer.observe(element);
-  });
-
-  // Loading complete - show main content after gate animation
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      const mainContent = document.getElementById("main-content");
-      if (mainContent) {
-        gsap.to(mainContent, {
-          opacity: 1,
-          duration: 0.5,
-          ease: "power2.out",
-        });
-      }
-    }, 2500);
   });
 
   // Preload images for better performance
@@ -264,5 +214,21 @@ import Footer from "../components/Footer.astro";
   /* Ensure main content is hidden initially */
   #main-content {
     opacity: 0;
+  }
+
+  /* Section animation initial state */
+  .section-animate {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+
+  /* Add subtle entrance effects */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
   }
 </style>

@@ -4,14 +4,14 @@
 
 <section
   id="timeline"
-  class="relative py-16 md:py-24 px-6 md:px-12 lg:px-16 bg-gradient-to-b from-[#FFF8DC] to-[#F5E6D3]"
+  class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#FFF8DC] to-[#F5E6D3] py-20 px-6"
 >
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-6xl mx-auto w-full">
     <!-- Section Header -->
-    <div class="text-center mb-16 md:mb-20 fade-in">
+    <div class="text-center mb-12 fade-in">
       <h2
         class="text-3xl md:text-5xl font-khmer-display text-[#8B0000] mb-4"
-        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.2);"
+        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.2); line-height: 1.8; padding: 0.5rem 0;"
       >
         កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍
       </h2>
@@ -35,11 +35,11 @@
     </div>
 
     <!-- DAY 1 Header -->
-    <div class="text-center mb-12 fade-in">
+    <div class="text-center mb-10 fade-in">
       <div
         class="inline-block bg-gradient-to-r from-[#8B0000] to-[#DC143C] px-8 py-4 rounded-lg shadow-xl"
       >
-        <h3 class="text-xl md:text-2xl font-khmer text-white mb-1">
+        <h3 class="text-xl md:text-2xl font-khmer text-white mb-1" style="line-height: 1.8;">
           ថ្ងៃព្រហស្បតិ៍ ទី២៦ ខែកុម្ភៈ ឆ្នាំ២០២៦
         </h3>
         <p class="text-base md:text-lg font-eng text-white/90">
@@ -48,51 +48,52 @@
       </div>
     </div>
 
-    <!-- Day 1 Timeline -->
-    <div class="relative mb-20">
+    <!-- Day 1 Timeline - Compact Display -->
+    <div class="relative mb-16">
       <div
-        class="absolute left-1/2 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B] transform -translate-x-1/2"
+        class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B] transform -translate-x-1/2 hidden md:block"
       >
       </div>
-      <div class="space-y-16">
+      <div class="space-y-10">
         <!-- 3:00 PM -->
         <div class="timeline-item fade-in relative">
           <div class="flex flex-col md:flex-row items-center md:gap-8">
             <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
             >
               <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
               >
                 <p
-                  class="text-3xl md:text-4xl font-eng font-bold text-[#D4AF37]"
+                  class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
                 >
                   3:00 PM
                 </p>
-                <p class="text-xl md:text-2xl font-khmer text-[#8B4513]">
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
                   ម៉ោង ៣:០០ រសៀល
                 </p>
               </div>
             </div>
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
             >
               <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
               >
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
+            <div class="w-full md:w-1/2 md:pl-12">
               <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
               >
                 <h3
-                  class="text-2xl md:text-3xl font-niradei text-[#8B0000] mb-3"
+                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
                 >
                   ពិធីសែនក្រុងពាលី
                 </h3>
                 <p
-                  class="text-lg md:text-xl font-eng font-semibold text-[#D2691E]"
+                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
                 >
                   Sen Krong Peali Ceremony
                 </p>
@@ -105,40 +106,41 @@
         <div class="timeline-item fade-in relative">
           <div class="flex flex-col md:flex-row items-center md:gap-8">
             <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
             >
               <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
               >
                 <p
                   class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
                 >
                   4:00 PM
                 </p>
-                <p class="text-lg md:text-xl font-khmer text-[#8B4513]">
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
                   ម៉ោង ៤:០០ រសៀល
                 </p>
               </div>
             </div>
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
             >
               <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
               >
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
+            <div class="w-full md:w-1/2 md:pl-12">
               <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
               >
                 <h3
-                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
+                  class="text-lg md:text-xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
                 >
                   ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត
                 </h3>
                 <p
-                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
+                  class="text-sm md:text-base font-eng font-semibold text-[#D2691E]"
                 >
                   Buddhist Chanting Ceremony
                 </p>
@@ -151,40 +153,41 @@
         <div class="timeline-item fade-in relative">
           <div class="flex flex-col md:flex-row items-center md:gap-8">
             <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
             >
               <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
               >
                 <p
                   class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
                 >
                   6:30 PM
                 </p>
-                <p class="text-lg md:text-xl font-khmer text-[#8B4513]">
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
                   ម៉ោង ៦:៣០ រសៀល
                 </p>
               </div>
             </div>
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
             >
               <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
               >
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
+            <div class="w-full md:w-1/2 md:pl-12">
               <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
               >
                 <h3
-                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
+                  class="text-lg md:text-xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
                 >
-                  អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច
+                  អញ្ជើញភ្ញៀវពិសាអាហារពេលល្ងាច
                 </h3>
                 <p
-                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
+                  class="text-sm md:text-base font-eng font-semibold text-[#D2691E]"
                 >
                   Evening Dinner Reception
                 </p>
@@ -196,11 +199,11 @@
     </div>
 
     <!-- DAY 2 Header -->
-    <div class="text-center mb-12 fade-in">
+    <div class="text-center mb-10 fade-in">
       <div
         class="inline-block bg-gradient-to-r from-[#8B0000] to-[#DC143C] px-8 py-4 rounded-lg shadow-xl"
       >
-        <h3 class="text-xl md:text-2xl font-khmer text-white mb-1">
+        <h3 class="text-xl md:text-2xl font-khmer text-white mb-1" style="line-height: 1.8;">
           ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
         </h3>
         <p class="text-base md:text-lg font-eng text-white/90">
@@ -209,97 +212,52 @@
       </div>
     </div>
 
-    <!-- Day 2 Timeline -->
-    <div class="relative mb-20">
+    <!-- Day 2 Timeline - Compact Display -->
+    <div class="relative">
       <div
-        class="absolute left-1/2 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B] transform -translate-x-1/2"
+        class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B] transform -translate-x-1/2 hidden md:block"
       >
       </div>
-      <div class="space-y-16">
-        <!-- 6:30 AM -->
-        <div class="timeline-item fade-in relative">
-          <div class="flex flex-col md:flex-row items-center md:gap-8">
-            <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
-            >
-              <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
-              >
-                <p
-                  class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
-                >
-                  6:30 AM
-                </p>
-                <p class="text-lg md:text-xl font-khmer text-[#8B4513]">
-                  ម៉ោង ៦:៣០ ព្រឹក
-                </p>
-              </div>
-            </div>
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
-            >
-              <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
-              >
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
-              <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
-              >
-                <h3
-                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
-                >
-                  ជួបជុំភ្ញៀវកិត្តិយសទាំងសងខាង
-                </h3>
-                <p
-                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
-                >
-                  Gathering of Honored Guests
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div class="space-y-10">
         <!-- 7:00 AM -->
         <div class="timeline-item fade-in relative">
           <div class="flex flex-col md:flex-row items-center md:gap-8">
             <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
             >
               <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
               >
                 <p
                   class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
                 >
                   7:00 AM
                 </p>
-                <p class="text-lg md:text-xl font-khmer text-[#8B4513]">
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
                   ម៉ោង ៧:០០ ព្រឹក
                 </p>
               </div>
             </div>
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
             >
               <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
               >
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
+            <div class="w-full md:w-1/2 md:pl-12">
               <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
               >
                 <h3
-                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
+                  class="text-lg md:text-xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
                 >
-                  ពិធីហែរជំនូនកំណត់ចូលរោងជ័យ
+                  ពិធីហែរជំនូនចូលរោងជ័យ
                 </h3>
                 <p
-                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
+                  class="text-sm md:text-base font-eng font-semibold text-[#D2691E]"
                 >
                   Groom's Procession Ceremony
                 </p>
@@ -308,46 +266,101 @@
           </div>
         </div>
 
-        <!-- 7:30 AM -->
+        <!-- 8:00 AM -->
         <div class="timeline-item fade-in relative">
           <div class="flex flex-col md:flex-row items-center md:gap-8">
             <div
-              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-6 md:mb-0"
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
             >
               <div
-                class="inline-block bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] px-6 py-4"
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
               >
                 <p
                   class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
                 >
-                  7:30 AM
+                  8:00 AM
                 </p>
-                <p class="text-lg md:text-xl font-khmer text-[#8B4513]">
-                  ម៉ោង ៧:៣០ ព្រឹក
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
+                  ម៉ោង ៨:០០ ព្រឹក
                 </p>
               </div>
             </div>
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 flex items-center justify-center top-1/2 -mt-3 md:mt-0"
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
             >
               <div
-                class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-pulse"
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
               >
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-12 mt-6 md:mt-0">
+            <div class="w-full md:w-1/2 md:pl-12">
               <div
-                class="bg-white rounded-lg shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
               >
                 <h3
-                  class="text-xl md:text-2xl font-niradei text-[#8B0000] mb-2"
+                  class="text-lg md:text-xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
                 >
-                  ពិធីចៅមហា និយាយដើមការ សែនក្រសាល
+                  ពិធីពាក់ខ្សែដៃ និងអាពាហ៍ពិពាហ៍
                 </h3>
                 <p
-                  class="text-base md:text-lg font-eng font-semibold text-[#D2691E]"
+                  class="text-sm md:text-base font-eng font-semibold text-[#D2691E]"
                 >
-                  Traditional Blessing & Breakfast
+                  Hair Cutting & Wedding Ceremony
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5:00 PM -->
+        <div class="timeline-item fade-in relative">
+          <div class="flex flex-col md:flex-row items-center md:gap-8">
+            <div
+              class="w-full md:w-1/2 md:pr-12 text-center md:text-right mb-4 md:mb-0"
+            >
+              <div
+                class="inline-block bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] px-6 py-3"
+              >
+                <p
+                  class="text-2xl md:text-3xl font-eng font-bold text-[#D4AF37]"
+                >
+                  5:00 PM
+                </p>
+                <p class="text-lg md:text-xl font-khmer text-[#8B4513]" style="line-height: 1.8;">
+                  ម៉ោង ៥:០០ រសៀល
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-4 border-white shadow-lg z-10 hidden md:flex items-center justify-center"
+            >
+              <div
+                class="w-2 h-2 rounded-full bg-white animate-pulse"
+              >
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-12">
+              <div
+                class="bg-white rounded-xl shadow-lg border-2 border-[#D4AF37] p-6 text-center md:text-left"
+              >
+                <h3
+                  class="text-lg md:text-xl font-niradei text-[#8B0000] mb-2"
+                  style="line-height: 1.8; padding: 0.25rem 0;"
+                >
+                  អញ្ជើញភ្ញៀវពិសាអាហារពេលល្ងាច
+                </h3>
+                <p
+                  class="text-sm md:text-base font-eng font-semibold text-[#D2691E]"
+                >
+                  Evening Reception & Dinner
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
                 </p>
               </div>
             </div>

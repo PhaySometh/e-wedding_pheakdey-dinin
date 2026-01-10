@@ -4,14 +4,26 @@
 
 <section
   id="event-details"
-  class="relative py-16 md:py-24 px-6 md:px-12 lg:px-16 bg-gradient-to-b from-[#F5E6D3] to-[#FFF8DC]"
+  class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#F5E6D3] to-[#FFF8DC] py-20 px-6 overflow-hidden"
 >
-  <div class="max-w-6xl mx-auto">
+  <!-- Optional: Subtle couple photo background (uncomment to use) -->
+  <!-- 
+  <div class="absolute inset-0 opacity-5">
+    <img 
+      src="/photos/Invitation Cover.jpg" 
+      alt="Couple" 
+      class="w-full h-full object-cover"
+      style="filter: blur(2px) grayscale(30%);"
+    />
+  </div>
+  -->
+  
+  <div class="max-w-6xl mx-auto w-full relative z-10">
     <!-- Section Header -->
-    <div class="text-center mb-16 md:mb-20 fade-in">
+    <div class="text-center mb-12 fade-in">
       <h2
         class="text-3xl md:text-5xl font-khmer-display text-[#8B0000] mb-4"
-        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.2);"
+        style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.2); line-height: 1.8; padding: 0.5rem 0;"
       >
         កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍
       </h2>
@@ -36,11 +48,11 @@
     </div>
 
     <!-- Details Cards -->
-    <div class="grid md:grid-cols-2 gap-12 mb-16 md:mb-20">
+    <div class="grid md:grid-cols-2 gap-10 mb-12 max-w-5xl mx-auto">
       <!-- Date & Time Card -->
       <div class="fade-in">
         <div
-          class="bg-white rounded-xl shadow-2xl border-2 border-[#D4AF37] p-10 relative overflow-hidden h-full hover:shadow-3xl transition-all duration-300 hover:-translate-y-2"
+          class="bg-white rounded-2xl shadow-2xl border-2 border-[#D4AF37] p-10 relative overflow-visible h-full hover:shadow-3xl transition-all duration-300 hover:-translate-y-2"
         >
           <!-- Icon -->
           <div class="absolute top-4 right-4 opacity-10">
@@ -80,16 +92,16 @@
 
           <div class="relative z-10">
             <!-- Title -->
-            <div class="flex items-center mb-8">
+            <div class="flex flex-col items-center mb-8">
               <div
-                class="w-14 h-14 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] flex items-center justify-center mr-4 shadow-lg"
+                class="w-16 h-16 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] flex items-center justify-center mb-4 shadow-lg"
               >
                 <svg
-                  width="28"
-                  height="28"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#8B4513"
+                  stroke="white"
                   stroke-width="2"
                   class="text-white"
                 >
@@ -97,8 +109,8 @@
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
-              <div>
-                <h3 class="text-2xl md:text-3xl font-niradei text-[#8B0000]">
+              <div class="text-center">
+                <h3 class="text-2xl md:text-3xl font-niradei text-[#8B0000]" style="line-height: 1.8; padding: 0.5rem 0;">
                   កាលបរិច្ឆេទ
                 </h3>
                 <p
@@ -110,8 +122,8 @@
             </div>
 
             <!-- Date in Khmer -->
-            <div class="mb-6 pb-3 border-b-2 border-[#FFD700] inline-block">
-              <p class="text-xl md:text-2xl font-khmer text-[#8B4513] mb-2">
+            <div class="mb-6 pb-3 border-b-2 border-[#FFD700] text-center">
+              <p class="text-xl md:text-2xl font-khmer text-[#8B4513] mb-2" style="line-height: 1.8; padding: 0.5rem 0;">
                 ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
               </p>
               <p class="text-lg md:text-xl font-eng text-[#D2691E]">
@@ -120,8 +132,8 @@
             </div>
 
             <!-- Time in Khmer -->
-            <div class="mt-8 pb-3 border-b-2 border-[#FFD700] inline-block">
-              <p class="text-xl md:text-2xl font-khmer text-[#8B4513] mb-2">
+            <div class="mt-8 pb-3 border-b-2 border-[#FFD700] text-center">
+              <p class="text-xl md:text-2xl font-khmer text-[#8B4513] mb-2" style="line-height: 1.8; padding: 0.5rem 0;">
                 ម៉ោង ៥:០០នាទីល្ងាច ជាបន្តបន្ទាប់
               </p>
               <p class="text-lg md:text-xl font-eng text-[#D2691E]">
@@ -131,9 +143,9 @@
 
             <!-- Note -->
             <div
-              class="mt-8 p-6 bg-[#FFF8DC] rounded-lg border border-[#D4AF37] mx-auto inline-block"
+              class="mt-8 p-6 bg-[#FFF8DC] rounded-lg border border-[#D4AF37] mx-auto text-center"
             >
-              <p class="text-base font-khmer text-[#8B4513] mb-2">
+              <p class="text-base font-khmer text-[#8B4513] mb-2" style="line-height: 1.8;">
                 សូមអញ្ជើញមកទាន់ពេលវេលា
               </p>
               <p class="text-sm font-eng text-[#D2691E]">
@@ -147,7 +159,7 @@
       <!-- Location Card -->
       <div class="fade-in">
         <div
-          class="bg-white rounded-xl shadow-2xl border-2 border-[#D4AF37] p-10 relative overflow-hidden h-full hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 text-center"
+          class="bg-white rounded-2xl shadow-2xl border-2 border-[#D4AF37] p-10 relative overflow-visible h-full hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 text-center"
         >
           <!-- Icon -->
           <div class="absolute top-4 right-4 opacity-10">
@@ -172,7 +184,7 @@
                   height="36"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#8B4513"
+                  stroke="white"
                   stroke-width="2"
                   class="text-white"
                 >
@@ -183,7 +195,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-2xl md:text-3xl font-niradei text-[#8B0000]">
+                <h3 class="text-2xl md:text-3xl font-niradei text-[#8B0000]" style="line-height: 1.8; padding: 0.5rem 0;">
                   ទីកន្លែង
                 </h3>
                 <p
@@ -195,17 +207,19 @@
             </div>
 
             <!-- Location Details -->
-            <div class="space-y-6 flex flex-col items-center">
+            <div class="space-y-6">
               <div class="pb-3 border-b-2 border-[#FFD700] inline-block">
                 <p
-                  class="text-lg md:text-xl font-khmer text-[#8B4513] mb-3 leading-relaxed"
+                  class="text-lg md:text-xl font-khmer text-[#8B4513] mb-3"
+                  style="line-height: 1.8; padding: 0.5rem 0;"
                 >
                   នៅ គេហដ្ឋានខាងស្រី<br />
                   ស្ថិតនៅ ភូមិកោះដាច់ សង្កាត់កោះដាច់<br />
                   ខណ្ឌជ្រោយចង្វារ រាជធានីភ្នំពេញ
                 </p>
                 <p
-                  class="text-base md:text-lg font-eng text-[#D2691E] leading-relaxed"
+                  class="text-base md:text-lg font-eng text-[#D2691E]"
+                  style="line-height: 1.6;"
                 >
                   At the Bride's House<br />
                   Koh Dach Village, Sang Kat Koh Dach<br />
@@ -281,12 +295,6 @@
       <div
         class="inline-block bg-gradient-to-r from-[#FFD700]/20 via-[#D4AF37]/20 to-[#FFD700]/20 px-8 py-6 rounded-lg border-2 border-[#D4AF37]"
       >
-        <p class="text-lg font-khmer text-[#8B0000] mb-2">
-          🎊 សូមអញ្ជើញមករីករាយជាមួយគ្នា 🎊
-        </p>
-        <p class="text-base font-eng text-[#8B4513] italic">
-          We look forward to celebrating with you!
-        </p>
       </div>
     </div>
   </div>
