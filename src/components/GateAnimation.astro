@@ -1,0 +1,120 @@
+---
+// Gate Animation Component - Opening gates effect
+---
+
+<div id="gate-container" class="fixed inset-0 z-50 pointer-events-none">
+  <!-- Left Gate -->
+  <div id="gate-left" class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-[#8B4513] via-[#D2691E] to-[#8B4513] flex items-center justify-center overflow-hidden">
+    <!-- Ornate Pattern Overlay -->
+    <div class="absolute inset-0 opacity-20">
+      <svg class="w-full h-full" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pattern-left" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="2"/>
+            <path d="M 50 20 L 50 80 M 20 50 L 80 50" stroke="#D4AF37" stroke-width="2"/>
+            <circle cx="50" cy="50" r="15" fill="none" stroke="#FFD700" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="400" height="800" fill="url(#pattern-left)"/>
+      </svg>
+    </div>
+    
+    <!-- Gold Border -->
+    <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B]"></div>
+    
+    <!-- Monogram -->
+    <div class="relative z-10 flex flex-col items-center">
+      <div class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] flex items-center justify-center shadow-2xl border-4 border-[#FFF8DC]">
+        <span class="text-5xl md:text-7xl font-khmer-display text-[#8B4513]">ភ</span>
+      </div>
+      <div class="mt-4 md:mt-6">
+        <svg width="80" height="40" viewBox="0 0 80 40" class="mx-auto">
+          <path d="M 10 20 Q 20 10, 40 20 T 70 20" stroke="#FFD700" stroke-width="2" fill="none"/>
+          <circle cx="40" cy="20" r="3" fill="#FFD700"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Gate -->
+  <div id="gate-right" class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[#8B4513] via-[#D2691E] to-[#8B4513] flex items-center justify-center overflow-hidden">
+    <!-- Ornate Pattern Overlay -->
+    <div class="absolute inset-0 opacity-20">
+      <svg class="w-full h-full" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pattern-right" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="2"/>
+            <path d="M 50 20 L 50 80 M 20 50 L 80 50" stroke="#D4AF37" stroke-width="2"/>
+            <circle cx="50" cy="50" r="15" fill="none" stroke="#FFD700" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="400" height="800" fill="url(#pattern-right)"/>
+      </svg>
+    </div>
+    
+    <!-- Gold Border -->
+    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#FFD700] via-[#D4AF37] to-[#B8860B]"></div>
+    
+    <!-- Monogram -->
+    <div class="relative z-10 flex flex-col items-center">
+      <div class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] flex items-center justify-center shadow-2xl border-4 border-[#FFF8DC]">
+        <span class="text-5xl md:text-7xl font-khmer-display text-[#8B4513]">ស</span>
+      </div>
+      <div class="mt-4 md:mt-6">
+        <svg width="80" height="40" viewBox="0 0 80 40" class="mx-auto">
+          <path d="M 10 20 Q 20 10, 40 20 T 70 20" stroke="#FFD700" stroke-width="2" fill="none"/>
+          <circle cx="40" cy="20" r="3" fill="#FFD700"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glow Effect Behind Gates -->
+  <div class="absolute inset-0 bg-gradient-radial from-[#FFD700] via-transparent to-transparent opacity-0" id="gate-glow"></div>
+</div>
+
+<script>
+  import { gsap } from 'gsap';
+
+  // Wait for page load
+  window.addEventListener('load', () => {
+    const timeline = gsap.timeline({
+      onComplete: () => {
+        // Remove gate container from DOM after animation
+        const gateContainer = document.getElementById('gate-container');
+        if (gateContainer) {
+          setTimeout(() => {
+            gateContainer.style.display = 'none';
+          }, 500);
+        }
+      }
+    });
+
+    // Glow effect
+    timeline.to('#gate-glow', {
+      opacity: 0.3,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    });
+
+    // Open gates
+    timeline.to('#gate-left', {
+      x: '-100%',
+      duration: 1.5,
+      ease: 'power2.inOut'
+    }, '+=0.5');
+
+    timeline.to('#gate-right', {
+      x: '100%',
+      duration: 1.5,
+      ease: 'power2.inOut'
+    }, '-=1.5'); // Start at same time as left gate
+
+    // Fade out glow
+    timeline.to('#gate-glow', {
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power2.out'
+    }, '-=0.5');
+  });
+</script>

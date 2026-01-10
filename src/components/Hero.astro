@@ -1,0 +1,188 @@
+---
+// Hero Section - Main wedding invitation header
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <svg class="w-full h-full" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="hero-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#D4AF37" stroke-width="3"/>
+          <path d="M 100 40 L 100 160 M 40 100 L 160 100" stroke="#D4AF37" stroke-width="2"/>
+          <circle cx="100" cy="100" r="30" fill="none" stroke="#B8860B" stroke-width="2"/>
+          <path d="M 70 70 L 130 130 M 130 70 L 70 130" stroke="#FFD700" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="800" fill="url(#hero-pattern)"/>
+    </svg>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto">
+    <!-- Invitation Title in Khmer -->
+    <div class="fade-in mb-8 md:mb-12" id="hero-title">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-khmer-display text-[#D4AF37] mb-4" style="text-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);">
+        សំពិសមង្គលការ
+      </h1>
+      <p class="text-xl md:text-2xl font-eng text-[#8B4513] tracking-widest">
+        WEDDING INVITATION
+      </p>
+    </div>
+
+    <!-- Ornamental Divider -->
+    <div class="my-6 md:my-8 flex items-center justify-center">
+      <svg width="200" height="60" viewBox="0 0 200 60" class="mx-auto">
+        <path d="M 20 30 Q 50 15, 100 30 T 180 30" stroke="#D4AF37" stroke-width="2" fill="none"/>
+        <circle cx="50" cy="22" r="4" fill="#FFD700"/>
+        <circle cx="100" cy="30" r="6" fill="#D4AF37"/>
+        <circle cx="150" cy="22" r="4" fill="#FFD700"/>
+        <path d="M 90 30 L 95 40 L 100 30 L 105 40 L 110 30" stroke="#B8860B" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- Couple Names in Khmer -->
+    <div class="fade-in mb-6 md:mb-8" id="hero-names-khmer">
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-khmer-display text-[#8B0000] mb-2" style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);">
+        ល្មុត ភក្តី
+      </h2>
+      <div class="flex items-center justify-center my-4">
+        <div class="h-px w-16 md:w-24 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+        <span class="mx-4 text-3xl md:text-4xl text-[#D4AF37]">❖</span>
+        <div class="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
+      </div>
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-khmer-display text-[#8B0000]" style="text-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);">
+        ស្រ៊ន ឌីនីន
+      </h2>
+    </div>
+
+    <!-- Monogram/Logo -->
+    <div class="fade-in my-8 md:my-12" id="hero-monogram">
+      <div class="inline-block relative">
+        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] flex items-center justify-center shadow-2xl border-4 border-[#FFF8DC] relative">
+          <div class="text-3xl md:text-5xl font-khmer-display text-white">
+            <span>ភ</span>
+            <span class="text-2xl md:text-3xl">❖</span>
+            <span>ស</span>
+          </div>
+          <!-- Rotating ring animation -->
+          <div class="absolute inset-0 rounded-full border-2 border-[#FFD700] border-dashed animate-spin" style="animation-duration: 20s;"></div>
+        </div>
+        
+        <!-- Decorative corners -->
+        <div class="absolute -top-4 -left-4 text-2xl md:text-3xl text-[#FFD700]">✦</div>
+        <div class="absolute -top-4 -right-4 text-2xl md:text-3xl text-[#FFD700]">✦</div>
+        <div class="absolute -bottom-4 -left-4 text-2xl md:text-3xl text-[#FFD700]">✦</div>
+        <div class="absolute -bottom-4 -right-4 text-2xl md:text-3xl text-[#FFD700]">✦</div>
+      </div>
+    </div>
+
+    <!-- Couple Names in English -->
+    <div class="fade-in mb-6 md:mb-8" id="hero-names-english">
+      <h3 class="text-2xl md:text-4xl font-eng font-semibold text-[#8B4513] tracking-wide">
+        Lmut Pheakdey
+      </h3>
+      <p class="text-lg md:text-2xl font-eng text-[#D4AF37] my-2">&</p>
+      <h3 class="text-2xl md:text-4xl font-eng font-semibold text-[#8B4513] tracking-wide">
+        Srorn Dinin
+      </h3>
+    </div>
+
+    <!-- Date -->
+    <div class="fade-in mt-8 md:mt-12" id="hero-date">
+      <div class="inline-block bg-white/80 backdrop-blur-sm px-8 md:px-12 py-6 md:py-8 rounded-lg shadow-2xl border-2 border-[#D4AF37]">
+        <p class="text-xl md:text-3xl font-khmer text-[#8B0000] mb-2">
+          ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
+        </p>
+        <p class="text-lg md:text-2xl font-eng text-[#8B4513] tracking-wide">
+          Friday, February 27th, 2026
+        </p>
+        <div class="mt-4 pt-4 border-t border-[#D4AF37]">
+          <p class="text-lg md:text-xl font-khmer text-[#D2691E]">
+            ម៉ោង ៥:០០នាទីល្ងាច
+          </p>
+          <p class="text-base md:text-lg font-eng text-[#D2691E]">
+            5:00 PM onwards
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="fade-in mt-12 md:mt-16 animate-bounce" id="hero-scroll">
+      <p class="text-sm md:text-base font-eng text-[#8B4513] mb-2 tracking-widest">SCROLL DOWN</p>
+      <svg width="30" height="50" viewBox="0 0 30 50" class="mx-auto">
+        <rect x="10" y="5" width="10" height="20" rx="5" fill="none" stroke="#D4AF37" stroke-width="2"/>
+        <circle cx="15" cy="12" r="2" fill="#D4AF37">
+          <animate attributeName="cy" from="12" to="18" dur="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" from="1" to="0.3" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M 15 35 L 10 40 L 15 45 L 20 40 Z" fill="#D4AF37"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Floating decorative elements -->
+  <div class="absolute top-10 left-10 text-4xl md:text-6xl text-[#FFD700] opacity-20 animate-pulse" style="animation-duration: 3s;">✦</div>
+  <div class="absolute top-20 right-16 text-3xl md:text-5xl text-[#D4AF37] opacity-20 animate-pulse" style="animation-duration: 4s; animation-delay: 1s;">❖</div>
+  <div class="absolute bottom-32 left-20 text-5xl md:text-7xl text-[#FFD700] opacity-20 animate-pulse" style="animation-duration: 5s; animation-delay: 0.5s;">✦</div>
+  <div class="absolute bottom-20 right-10 text-4xl md:text-6xl text-[#D4AF37] opacity-20 animate-pulse" style="animation-duration: 3.5s; animation-delay: 1.5s;">❖</div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate hero elements on load
+  window.addEventListener('load', () => {
+    // Wait for gates to open (3 seconds)
+    setTimeout(() => {
+      const timeline = gsap.timeline();
+
+      timeline.from('#hero-title', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power2.out'
+      });
+
+      timeline.from('#hero-names-khmer', {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        ease: 'back.out(1.7)'
+      }, '-=0.5');
+
+      timeline.from('#hero-monogram', {
+        opacity: 0,
+        scale: 0,
+        rotation: -180,
+        duration: 1,
+        ease: 'back.out(1.7)'
+      }, '-=0.5');
+
+      timeline.from('#hero-names-english', {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power2.out'
+      }, '-=0.3');
+
+      timeline.from('#hero-date', {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: 'power2.out'
+      }, '-=0.3');
+
+      timeline.from('#hero-scroll', {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: 'power2.out'
+      }, '-=0.2');
+    }, 3000);
+  });
+</script>
