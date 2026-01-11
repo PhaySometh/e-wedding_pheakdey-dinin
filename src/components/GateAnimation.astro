@@ -9,6 +9,8 @@
       src="/photos/gate_background.png" 
       alt="Gate Background" 
       class="w-full h-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
     />
   </div>
 
@@ -38,6 +40,10 @@
           alt="Couple Monogram" 
           class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain drop-shadow-2xl"
           style="filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5));"
+          loading="eager"
+          fetchpriority="high"
+          width="320"
+          height="320"
         />
       </div>
     </div>
@@ -239,7 +245,7 @@
         opacity: 1,
         scale: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.45,
         ease: 'back.out(2)'
       },
       '-=0.6'
@@ -274,6 +280,8 @@
                 gateContainer.style.display = 'none';
                 // Re-enable scrolling after gates are fully removed
                 document.body.style.overflow = 'auto';
+                // Ensure we start at the top of the main content
+                window.scrollTo({ top: 0, behavior: 'auto' });
                 
                 // Trigger event for main content to start animating
                 document.dispatchEvent(new CustomEvent('gateOpened'));

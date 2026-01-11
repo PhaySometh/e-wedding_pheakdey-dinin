@@ -17,7 +17,7 @@ const {
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -43,6 +43,18 @@ const {
 		<meta
 			name="keywords"
 			content="wedding, cambodian wedding, Pheakdey, Dinin, 2026, Phnom Penh, Koh Dach"
+		/>
+
+		<!-- Preload critical images -->
+		<link
+			rel="preload"
+			href="/photos/initial_text_with_frame.png"
+			as="image"
+		/>
+		<link
+			rel="preload"
+			href="/photos/gate_background.png"
+			as="image"
 		/>
 
 		<!-- Preload critical fonts -->

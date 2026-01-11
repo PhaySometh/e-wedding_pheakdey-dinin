@@ -152,12 +152,21 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent auto-zoom on mobile devices */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   overflow-x: hidden;
   background: linear-gradient(to bottom, #fff8dc, #f5e6d3);
   line-height: var(--line-height-body);
+  /* Ensure proper scaling */
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 /* Khmer Text Support */
@@ -181,6 +190,23 @@ body {
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
+}
+
+/* Narrow, centered copy blocks for long invitation lines */
+.copy-block {
+  max-width: 42ch;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  text-wrap: balance;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .copy-block {
+    max-width: 60ch;
+    padding-inline: 1.5rem;
+  }
 }
 
 /* Centered Content */

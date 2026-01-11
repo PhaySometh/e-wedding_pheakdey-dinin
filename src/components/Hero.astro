@@ -188,63 +188,67 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate hero elements on load
-  window.addEventListener("load", () => {
-    // Wait for gates to open (3 seconds)
-    setTimeout(() => {
-      const timeline = gsap.timeline();
+  let heroIntroStarted = false;
 
-      timeline.from("#hero-title", {
+  const startHeroIntro = () => {
+    if (heroIntroStarted) return;
+    heroIntroStarted = true;
+
+    const timeline = gsap.timeline();
+
+    timeline.from("#hero-title", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    timeline.from(
+      "#hero-names-khmer",
+      {
         opacity: 0,
-        y: 50,
+        scale: 0.8,
         duration: 1,
+        ease: "back.out(1.7)",
+      },
+      "-=0.5",
+    );
+
+    timeline.from(
+      "#hero-monogram",
+      {
+        opacity: 0,
+        scale: 0,
+        rotation: -180,
+        duration: 1,
+        ease: "back.out(1.7)",
+      },
+      "-=0.5",
+    );
+
+    timeline.from(
+      "#hero-names-english",
+      {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
         ease: "power2.out",
-      });
+      },
+      "-=0.3",
+    );
 
-      timeline.from(
-        "#hero-names-khmer",
-        {
-          opacity: 0,
-          scale: 0.8,
-          duration: 1,
-          ease: "back.out(1.7)",
-        },
-        "-=0.5",
-      );
+    timeline.from(
+      "#hero-date",
+      {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: "power2.out",
+      },
+      "-=0.3",
+    );
+  };
 
-      timeline.from(
-        "#hero-monogram",
-        {
-          opacity: 0,
-          scale: 0,
-          rotation: -180,
-          duration: 1,
-          ease: "back.out(1.7)",
-        },
-        "-=0.5",
-      );
-
-      timeline.from(
-        "#hero-names-english",
-        {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        "-=0.3",
-      );
-
-      timeline.from(
-        "#hero-date",
-        {
-          opacity: 0,
-          y: 40,
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        "-=0.3",
-      );
-    }, 3000);
-  });
+  // Start hero intro when gates finish opening so users land on the hero first
+  document.addEventListener("gateOpened", startHeroIntro);
 </script>
