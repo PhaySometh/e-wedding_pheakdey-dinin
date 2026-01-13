@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+/* Khmer Display Font - Majestic headings */
+@font-face {
+  font-family: "Moul";
+  src: url("/fonts/Moul.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("/fonts/Moulpali.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Khmer Body Font - Readable text */
+@font-face {
+  font-family: "KhKantumruy";
+  src: url("/fonts/KhKantumruy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KhKantumruy";
+  src: url("/fonts/KhKantumruy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KhKantumruy";
+  src: url("/fonts/KhKantumruy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* English Modern Font - Clean accents */
+@font-face {
+  font-family: "Google Sans";
+  src: url("/fonts/GoogleSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("/fonts/GoogleSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("/fonts/GoogleSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Extra Khmer Fonts */
+@font-face {
+  font-family: "Niradei";
+  src: url("/fonts/Niradei-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Koulen";
+  src: url("/fonts/Koulen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom Font Utilities using Tailwind's layer system */
+@layer utilities {
+  .font-khmer {
+    font-family: "KhKantumruy", sans-serif;
+  }
+
+  .font-khmer-display {
+    font-family: "Moul", "Moulpali", serif;
+  }
+
+  .font-eng {
+    font-family: "Google Sans", system-ui, sans-serif;
+  }
+
+  .font-koulen {
+    font-family: "Koulen", sans-serif;
+  }
+
+  .font-niradei {
+    font-family: "Niradei", sans-serif;
+  }
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fff8dc 0%, #f5e6d3 50%, #faebd7 100%);
+  min-height: 100vh;
+}
+
+/* Ensure proper centering for sections */
+section {
+  width: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5e6d3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37, #b8860b);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffd700, #d4af37);
+}
+
+/* Smooth transitions */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Button animations */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Loading state */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Container utility for proper centering */
+.container-center {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
