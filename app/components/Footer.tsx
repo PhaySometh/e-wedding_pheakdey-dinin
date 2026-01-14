@@ -2,8 +2,8 @@
 
 export default function Footer() {
   return (
-    <footer className="relative py-12 md:py-16 px-6 md:px-12 lg:px-16 bg-gradient-to-b from-[#FFF8DC] to-[#D4AF37]/30 border-t-4 border-[#D4AF37] flex flex-col items-center justify-center">
-      <div className="max-w-4xl w-full mx-auto px-6 md:px-8 lg:px-10 flex flex-col items-center">
+    <footer className="relative section-wrapper bg-gradient-to-b from-[#FFF8DC] to-[#D4AF37]/30 border-t-4 border-[#D4AF37] flex flex-col items-center justify-center">
+      <div className="container flex flex-col items-center">
         {/* Decorative Top */}
         <div className="text-center mb-8 fade-in">
           <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
@@ -51,16 +51,9 @@ export default function Footer() {
           >
             សូមអរគុណ
           </h2>
-          <p className="copy-block text-2xl md:text-4xl font-eng font-bold text-[#D4AF37] mb-6">
-            Thank You
-          </p>
-
           <div className="flex flex-col items-center gap-3">
             <p className="copy-block text-base md:text-lg font-khmer text-[#8B4513] leading-relaxed">
               ការចូលរួមរបស់លោកអ្នក នឹងធ្វើឱ្យថ្ងៃរបស់យើងកាន់តែពិសេស
-            </p>
-            <p className="copy-block text-sm md:text-base font-eng text-[#D2691E] italic leading-relaxed">
-              Your presence will make our special day even more memorable
             </p>
           </div>
         </div>
@@ -73,9 +66,6 @@ export default function Footer() {
                 <p className="text-xl md:text-2xl font-khmer-display text-[#8B0000]">
                   ភក្តី
                 </p>
-                <p className="text-sm md:text-base font-eng text-[#8B4513]">
-                  Pheakdey
-                </p>
               </div>
 
               <div className="text-3xl md:text-4xl text-[#D4AF37]">❖</div>
@@ -83,9 +73,6 @@ export default function Footer() {
               <div className="text-left">
                 <p className="text-xl md:text-2xl font-khmer-display text-[#8B0000]">
                   ឌីនីន
-                </p>
-                <p className="text-sm md:text-base font-eng text-[#8B4513]">
-                  Dinin
                 </p>
               </div>
             </div>

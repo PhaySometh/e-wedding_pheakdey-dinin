@@ -10,68 +10,58 @@ export default function FlipClockCountdownSection() {
   return (
     <section
       id="countdown"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#FFF8DC] to-[#F5E6D3] py-20 px-6"
+      className="relative min-h-screen section-wrapper flex items-center justify-center"
+      style={{
+        backgroundImage: `url('/photos/countdown-section-background.JPG')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
-      {/* Decorative Background */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none" />
+      {/* Overlay for better readability */}
+      <div className="absolute inset-0 bg-white/70 pointer-events-none" />
 
-      <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
+      <div className="relative z-10 text-center container">
         {/* Header */}
-        <div className="mb-12 space-y-4">
+        <div className="mb-8 md:mb-12 space-y-3 md:space-y-4">
           <h2
-            className="font-khmer-display text-3xl md:text-5xl text-[#b8860b]"
+            className="font-khmer-display text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#b8860b]"
             style={{ lineHeight: "1.8" }}
           >
             រាប់ថយក្រោយរហូតដល់ថ្ងៃមង្គល
           </h2>
-          <p className="font-eng text-xl md:text-2xl text-[#D4AF37] tracking-wide">
+          <p className="font-eng text-base sm:text-lg md:text-xl lg:text-2xl text-[#8B4513] tracking-wide">
             Counting Down to Our Special Day
           </p>
         </div>
 
         {/* Flip Clock Display */}
-        <div className="flip-clock-wrapper mb-8">
+        <div className="flip-clock-wrapper mt-2 md:mt-4 lg:mt-6 overflow-hidden w-full flex justify-center items-center">
           <FlipClockCountdown
             to={weddingDate}
             labels={["ថ្ងៃ", "ម៉ោង", "នាទី", "វិនាទី"]}
             labelStyle={{
-              fontSize: "1rem",
+              fontSize: "clamp(0.7rem, 2vw, 1rem)",
               fontWeight: 500,
               color: "#b8860b",
               textTransform: "uppercase",
               marginTop: "0.5rem",
             }}
             digitBlockStyle={{
-              width: "3rem",
-              height: "4.5rem",
-              fontSize: "2.5rem",
+              width: "clamp(2.5rem, 8vw, 4rem)",
+              height: "clamp(3.5rem, 10vw, 6rem)",
+              fontSize: "clamp(1.5rem, 5vw, 3rem)",
               background: "linear-gradient(180deg, #3a3a3a 0%, #2c2c2c 50%, #1a1a1a 100%)",
               color: "#ffffff",
             }}
             dividerStyle={{ color: "#D4AF37", height: "1px" }}
-            separatorStyle={{ color: "#D4AF37", size: "6px" }}
+            separatorStyle={{ color: "#D4AF37", size: "clamp(4px, 1vw, 8px)" }}
             duration={0.5}
           />
-          
-          {/* English Labels */}
-          <div className="flex justify-center gap-4 md:gap-8 mt-2">
-            <div className="font-eng text-xs md:text-sm text-[#8B4513] tracking-wider uppercase w-12 md:w-16">
-              Days
-            </div>
-            <div className="font-eng text-xs md:text-sm text-[#8B4513] tracking-wider uppercase w-12 md:w-16">
-              Hours
-            </div>
-            <div className="font-eng text-xs md:text-sm text-[#8B4513] tracking-wider uppercase w-12 md:w-16">
-              Minutes
-            </div>
-            <div className="font-eng text-xs md:text-sm text-[#8B4513] tracking-wider uppercase w-12 md:w-16">
-              Seconds
-            </div>
-          </div>
         </div>
 
         {/* Wedding Date */}
-        <div className="text-[#b8860b] text-sm md:text-base font-eng tracking-wider">
+        <div className="text-[#b8860b] text-xs sm:text-sm md:text-base font-eng tracking-wider">
           February 27, 2026 • 5:00 PM
         </div>
       </div>
@@ -81,18 +71,38 @@ export default function FlipClockCountdownSection() {
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 0 1rem;
         }
         
-        /* Responsive sizing for mobile */
-        @media (max-width: 768px) {
-          .flip-clock-wrapper .flip-clock-countdown {
-            transform: scale(0.8);
+        .flip-clock-wrapper > div {
+          max-width: 100%;
+        }
+        
+        /* Ensure proper scaling on all devices */
+        .flip-clock-wrapper .flip-clock {
+          max-width: 100%;
+        }
+        
+        /* Fine-tune for very small screens */
+        @media (max-width: 320px) {
+          .flip-clock-wrapper {
+            padding: 0 0.5rem;
           }
         }
         
-        @media (max-width: 480px) {
-          .flip-clock-wrapper .flip-clock-countdown {
-            transform: scale(0.65);
+        /* Fine-tune for medium screens */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .flip-clock-wrapper {
+            padding: 0 2rem;
+          }
+        }
+        
+        /* Fine-tune for large screens */
+        @media (min-width: 1024px) {
+          .flip-clock-wrapper {
+            padding: 0 3rem;
           }
         }
       `}</style>

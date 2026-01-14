@@ -4,7 +4,7 @@ export default function GratitudeApology() {
   return (
     <section
       id="gratitude-apology"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#F5E6D3] to-[#FFF8DC] py-20 px-6"
+      className="relative min-h-screen section-wrapper flex items-center justify-center bg-gradient-to-b from-[#F5E6D3] to-[#FFF8DC]"
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
@@ -51,7 +51,7 @@ export default function GratitudeApology() {
         </div>
       </div>
 
-      <div className="max-w-4xl w-full mx-auto relative z-10 px-6 md:px-10 lg:px-12 flex flex-col items-center">
+      <div className="container relative z-10 flex flex-col items-center">
         {/* Section Top Decoration */}
         <div className="text-center mb-12 fade-in mx-auto">
           <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">

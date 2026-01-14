@@ -9,6 +9,7 @@ import Hero from "./components/Hero";
 import InvitationCard from "./components/InvitationCard";
 import FlipClockCountdown from "./components/FlipClockCountdown";
 import PaymentQRCode from "./components/PaymentQRCode";
+import PhotoGallery from "./components/PhotoGallery";
 import LocationSection from "./components/LocationSection";
 import Timeline from "./components/Timeline";
 import GratitudeApology from "./components/GratitudeApology";
@@ -132,14 +133,17 @@ export default function Home() {
         {/* Flip Clock Countdown Section */}
         <FlipClockCountdown />
 
-        {/* Payment QR Code Section */}
-        <PaymentQRCode />
-
         {/* Location Section */}
         <LocationSection />
 
         {/* Timeline Section */}
         <Timeline />
+
+        {/* Payment QR Code Section */}
+        <PaymentQRCode />
+
+        {/* Photo Gallery Section */}
+        <PhotoGallery />
 
         {/* Gratitude & Apology Section */}
         <GratitudeApology />

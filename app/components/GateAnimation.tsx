@@ -207,14 +207,14 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
       <div
         ref={contentRef}
         id="gate-content"
-        className="relative z-10 flex flex-col items-center justify-between h-full w-full px-4 py-12 md:py-16 lg:py-20 pointer-events-auto opacity-0"
+        className="relative z-10 flex flex-col items-center justify-between h-full w-full px-4 py-2 md:py-4 lg:py-8 pointer-events-auto opacity-0"
       >
         {/* Top Section: Title, Couple Names, and Monogram */}
-        <div className="flex-shrink-0 text-center mt-4 md:mt-6 lg:mt-8 w-full">
+        <div className="flex-shrink-0 text-center w-full">
           <h1
             ref={titleRef}
             id="gate-title"
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-khmer-display text-[#FFD700] mb-4 md:mb-6 opacity-0"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-khmer-display text-[#FFD700] opacity-0"
             style={{
               textShadow:
                 "0 4px 20px rgba(0, 0, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 1)",
@@ -228,7 +228,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
           <p
             ref={namesRef}
             id="gate-names"
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-khmer-display text-[#8B0000] mb-6 md:mb-8 lg:mb-10 opacity-0"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-khmer-display text-[#8B0000] opacity-0"
             style={{
               textShadow:
                 "0 3px 15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6)",
@@ -243,7 +243,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
           <div
             ref={monogramRef}
             id="gate-monogram"
-            className="mt-4 md:mt-6 lg:mt-8 flex justify-center items-center w-full opacity-0"
+            className="mt-4 md:mt-6 lg:mt-8 mb-4 md:mb-6 lg:mb-8 flex justify-center items-center w-full opacity-0"
           >
             <img
               src="/photos/initial_text_with_frame.png"
@@ -262,13 +262,13 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
         <div className="flex-grow"></div>
 
         {/* Bottom Section: Button and Event Details */}
-        <div className="flex justify-between flex-col text-center space-y-4 gap-2 mb-12 md:mb-16 lg:mb-20 xl:mb-24">
+        <div className="flex justify-between flex-col text-center">
           {/* Open Button */}
           <button
             ref={buttonRef}
             id="open-gate-btn"
             onClick={handleOpenGate}
-            className="group relative bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] hover:from-[#D4AF37] hover:to-[#8B6914] text-white font-khmer text-base sm:text-xl md:text-2xl lg:text-3xl px-12 sm:px-16 md:px-20 lg:px-24 py-6 sm:py-7 md:py-8 lg:py-10 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl border-4 border-white/50 mb-16 md:mb-20 lg:mb-24 xl:mb-28 opacity-0"
+            className="group relative bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] hover:from-[#D4AF37] hover:to-[#8B6914] text-white font-khmer text-base sm:text-xl md:text-2xl lg:text-3xl px-2 sm:px-4 md:px-6 lg:px-8 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl border-4 border-white/50 opacity-0"
             style={{ lineHeight: "1.8" }}
           >
             <span className="relative z-10 font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inline-block px-2">បើកធៀបការ</span>
@@ -279,7 +279,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
           <div
             ref={eventInfoRef}
             id="gate-event-info"
-            className="bg-black/40 backdrop-blur-md rounded-2xl px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14 py-6 sm:py-7 md:py-8 lg:py-10 border-2 border-[#D4AF37]/50 shadow-2xl max-w-4xl mx-auto opacity-0 mt-4 md:mt-6 lg:mt-8"
+            className="bg-black/40 backdrop-blur-md rounded-2xl px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8 border-2 border-[#D4AF37]/50 shadow-2xl max-w-4xl mx-auto opacity-0 mt-2 md:mt-4 lg:mt-6"
           >
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-khmer text-[#FFD700] mb-3 sm:mb-4 md:mb-5"

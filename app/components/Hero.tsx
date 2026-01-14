@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full flex items-center justify-center py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32"
+      className="relative w-full section-wrapper flex items-center justify-center"
       style={{ minHeight: "calc(100vh - 0px)" }}
     >
       {/* Background Pattern */}
@@ -60,7 +60,7 @@ export default function Hero() {
         <img
           src="/photos/couple-1.png"
           alt="Couple 1"
-          className="w-64 xl:w-80 2xl:w-96 h-auto object-contain"
+          className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
           style={{ 
             filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))"
           }}
@@ -72,7 +72,7 @@ export default function Hero() {
         <img
           src="/photos/couple-2.png"
           alt="Couple 2"
-          className="w-64 xl:w-80 2xl:w-96 h-auto object-contain"
+          className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
           style={{ 
             filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))"
           }}
@@ -80,7 +80,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto w-full">
+      <div className="relative z-10 text-center container-lg w-full">
         {/* Invitation Title in Khmer */}
         <div className="mb-8 md:mb-10 lg:mb-12 xl:mb-14" id="hero-title">
           <h1
@@ -92,21 +92,6 @@ export default function Hero() {
           <p className="text-lg md:text-xl lg:text-2xl font-eng text-[#8B4513] tracking-widest">
             WEDDING INVITATION
           </p>
-        </div>
-
-        {/* Ornamental Divider */}
-        <div className="my-6 md:my-8 lg:my-10 flex items-center justify-center">
-          <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
-            <path
-              d="M 20 30 Q 50 15, 100 30 T 180 30"
-              stroke="#D4AF37"
-              strokeWidth="2"
-              fill="none"
-            />
-            <circle cx="50" cy="22" r="4" fill="#FFD700" />
-            <circle cx="100" cy="30" r="6" fill="#D4AF37" />
-            <circle cx="150" cy="37" r="4" fill="#FFD700" />
-          </svg>
         </div>
 
         {/* Monogram/Logo Image */}
@@ -160,12 +145,27 @@ export default function Hero() {
           </h3>
         </div>
 
+        {/* Ornamental Divider */}
+        <div className="my-6 md:my-8 lg:my-10 flex items-center justify-center">
+          <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
+            <path
+              d="M 20 30 Q 50 15, 100 30 T 180 30"
+              stroke="#D4AF37"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle cx="50" cy="22" r="4" fill="#FFD700" />
+            <circle cx="100" cy="30" r="6" fill="#D4AF37" />
+            <circle cx="150" cy="37" r="4" fill="#FFD700" />
+          </svg>
+        </div>
+
         {/* Couple Images for Mobile - After Names, Before Date */}
-        <div className="lg:hidden mt-8 mb-12 sm:mb-14 md:mb-16 flex gap-6 sm:gap-8 justify-center items-center">
+        <div className="lg:hidden mt-8 mb-12 sm:mb-14 md:mb-16 flex gap-4 sm:gap-6 md:gap-8 justify-center items-center px-4">
           <img
             src="/photos/couple-1.png"
             alt="Couple 1"
-            className="w-40 sm:w-48 md:w-56 h-auto object-contain"
+            className="w-44 sm:w-56 md:w-64 h-auto object-contain max-w-[45%]"
             style={{ 
               filter: "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))"
             }}
@@ -173,7 +173,7 @@ export default function Hero() {
           <img
             src="/photos/couple-2.png"
             alt="Couple 2"
-            className="w-40 sm:w-48 md:w-56 h-auto object-contain"
+            className="w-44 sm:w-56 md:w-64 h-auto object-contain max-w-[45%]"
             style={{ 
               filter: "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))"
             }}
@@ -182,22 +182,61 @@ export default function Hero() {
 
         {/* Date */}
         <div className="mt-8 md:mt-10 lg:mt-12" id="hero-date">
-          <div className="inline-block bg-white/80 backdrop-blur-sm px-8 md:px-12 py-6 md:py-8 rounded-lg shadow-2xl border-2 border-[#D4AF37]">
+          <div className="inline-block bg-white/80 backdrop-blur-sm px-4 md:px-6 md:py-4 rounded-lg shadow-2xl border-2 border-[#D4AF37]">
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-khmer text-[#8B0000] mb-2">
               ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
-            </p>
-            <p className="text-sm md:text-base lg:text-lg xl:text-xl font-eng text-[#8B4513] tracking-wide">
-              Friday, February 27th, 2026
             </p>
             <div className="mt-4 pt-4 border-t border-[#D4AF37]">
               <p className="text-sm md:text-base lg:text-lg xl:text-xl font-khmer text-[#D2691E]">
                 ម៉ោង ៥:០០នាទីល្ងាច
               </p>
-              <p className="text-xs md:text-sm lg:text-base xl:text-lg font-eng text-[#D2691E]">
-                5:00 PM onwards
-              </p>
             </div>
           </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="mt-12 md:mt-16 flex flex-row gap-3 md:gap-4 justify-center items-center">
+          {/* Countdown Button */}
+          <button
+            onClick={() => {
+              document.getElementById('countdown')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}
+            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <span className="text-sm md:text-base font-khmer-display">រាប់ថយក្រោយ</span>
+            <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+          </button>
+
+          {/* Location/Map Button */}
+          <button
+            onClick={() => {
+              document.getElementById('location')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}
+            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B4513] to-[#A0522D] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <span className="text-sm md:text-base font-khmer-display">ទីតាំងពិធីមង្គលការ</span>
+            <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+          </button>
+
+          {/* QR Code Button */}
+          <button
+            onClick={() => {
+              document.getElementById('payment')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}
+            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B0000] to-[#B22222] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <span className="text-sm md:text-base font-khmer-display">ចំណងដៃ QR Code</span>
+            <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+          </button>
         </div>
       </div>
 
