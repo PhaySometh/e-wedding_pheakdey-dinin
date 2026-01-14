@@ -88,7 +88,7 @@ export default function GratitudeApology() {
           {/* Gratitude Section */}
           <div className="text-center mb-12">
             <h2
-              className="font-khmer-display text-3xl md:text-5xl text-[#8B0000] mb-6"
+              className="font-khmer-display text-3xl md:text-5xl text-[#003366] mb-6"
               style={{ lineHeight: "1.8" }}
             >
               សេចក្តីថ្លែងអំណរគុណ
@@ -120,7 +120,7 @@ export default function GratitudeApology() {
           {/* Apology Section */}
           <div className="text-center">
             <h2
-              className="font-khmer-display text-3xl md:text-5xl text-[#8B0000] mb-6"
+              className="font-khmer-display text-3xl md:text-5xl text-[#003366] mb-6"
               style={{ lineHeight: "1.8" }}
             >
               លិខិតសូមអភ័យទោស

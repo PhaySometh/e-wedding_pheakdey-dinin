@@ -14,6 +14,8 @@ import LocationSection from "./components/LocationSection";
 import Timeline from "./components/Timeline";
 import GratitudeApology from "./components/GratitudeApology";
 import Footer from "./components/Footer";
+import BackToTopButton from "./components/BackToTopButton";
+import MusicPlayer from "./components/MusicPlayer";
 
 export default function Home() {
   const [isGateOpen, setIsGateOpen] = useState(false);
@@ -151,6 +153,12 @@ export default function Home() {
         {/* Footer */}
         <Footer />
       </main>
+
+      {/* Music Player - Always visible */}
+      <MusicPlayer />
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
     </>
   );
 }

@@ -27,7 +27,8 @@ export default function Timeline() {
       },
       {
         timeKhmer: "ម៉ោង ៧:៣០ ព្រឹក",
-        eventKhmer: "ពិធីចៅមហានិយាយជើងការ សែនព្រេន <br />​រៀបរាប់ផ្លែឈើនិងពិសាអាហារពេលព្រឹក",
+        eventKhmer:
+          "ពិធីចៅមហានិយាយជើងការ សែនព្រេន <br />​រៀបរាប់ផ្លែឈើនិងពិសាអាហារពេលព្រឹក",
       },
       {
         timeKhmer: "ម៉ោង 9:០០ ព្រឹក",
@@ -62,34 +63,39 @@ export default function Timeline() {
         {/* Section Header */}
         <div className="text-center mb-2 md:mb-4 lg:mb-6 fade-in w-full">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#8B0000] mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#003366] mb-4 md:mb-6"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
           >
             កម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍
           </h2>
-        {/* Ornamental Divider */}
-        <div className="flex items-center justify-center">
-          <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
-            <path
-              d="M 20 30 Q 50 15, 100 30 T 180 30"
-              stroke="#D4AF37"
-              strokeWidth="2"
-              fill="none"
-            />
-            <circle cx="50" cy="22" r="4" fill="#FFD700" />
-            <circle cx="100" cy="30" r="6" fill="#D4AF37" />
-            <circle cx="150" cy="37" r="4" fill="#FFD700" />
-          </svg>
-        </div>
+          {/* Ornamental Divider */}
+          <div className="flex items-center justify-center">
+            <svg
+              width="200"
+              height="60"
+              viewBox="0 0 200 60"
+              className="mx-auto"
+            >
+              <path
+                d="M 20 30 Q 50 15, 100 30 T 180 30"
+                stroke="#D4AF37"
+                strokeWidth="2"
+                fill="none"
+              />
+              <circle cx="50" cy="22" r="4" fill="#FFD700" />
+              <circle cx="100" cy="30" r="6" fill="#D4AF37" />
+              <circle cx="150" cy="37" r="4" fill="#FFD700" />
+            </svg>
+          </div>
         </div>
 
         {/* DAY 1 Header */}
         <div className="text-center fade-in w-full flex justify-center">
-          <div className="inline-block bg-gradient-to-r from-[#8B0000] to-[#DC143C] px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg shadow-xl mb-2 md:mb-4 lg:mb-6">
+          <div className="inline-block bg-gradient-to-r from-[#003366] to-[#004d99] px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg shadow-xl mb-2 md:mb-4 lg:mb-6">
             <h3
               className="text-base sm:text-lg md:text-xl lg:text-2xl font-khmer text-white "
               style={{ lineHeight: "1" }}
@@ -107,7 +113,11 @@ export default function Timeline() {
           <div className="w-full max-w-3xl lg:max-w-4xl mx-auto">
             <div className="space-y-2 md:space-y-4">
               {timelineEvents.day1.map((event, index) => (
-                <TimelineItem key={`day1-${index}`} event={event} index={index} />
+                <TimelineItem
+                  key={`day1-${index}`}
+                  event={event}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -115,7 +125,7 @@ export default function Timeline() {
 
         {/* DAY 2 Header */}
         <div className="text-center fade-in w-full flex justify-center">
-          <div className="inline-block bg-gradient-to-r from-[#8B0000] to-[#DC143C] px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg shadow-xl mb-2 md:mb-4 lg:mb-6">
+          <div className="inline-block bg-gradient-to-r from-[#003366] to-[#004d99] px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg shadow-xl mb-2 md:mb-4 lg:mb-6">
             <h3
               className="text-base sm:text-lg md:text-xl lg:text-2xl font-khmer text-white mb-1"
               style={{ lineHeight: "1.8" }}
@@ -133,7 +143,11 @@ export default function Timeline() {
           <div className="w-full max-w-3xl lg:max-w-4xl mx-auto">
             <div className="space-y-2 md:space-y-4">
               {timelineEvents.day2.map((event, index) => (
-                <TimelineItem key={`day2-${index}`} event={event} index={index} />
+                <TimelineItem
+                  key={`day2-${index}`}
+                  event={event}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -154,7 +168,7 @@ function TimelineItem({ event, index }: { event: any; index: number }) {
           <div
             className={`inline-flex flex-col items-center justify-center rounded-lg md:rounded-xl shadow-lg border-2 w-full ${
               isMain
-                ? "bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-[#8B0000]"
+                ? "bg-gradient-to-br from-[#FFD700] to-[#D4AF37] border-[#003366]"
                 : "bg-white border-[#D4AF37]"
             }`}
           >
@@ -174,15 +188,20 @@ function TimelineItem({ event, index }: { event: any; index: number }) {
           <div
             className={`rounded-lg md:rounded-xl shadow-lg border-2 w-full ${
               isMain
-                ? "bg-gradient-to-br from-white to-[#FFF8DC] border-[#8B0000]"
+                ? "bg-gradient-to-br from-white to-[#FFF8DC] border-[#003366]"
                 : "bg-white border-[#D4AF37]"
             }`}
           >
             <h3
               className={`text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-niradei ${
-                isMain ? "text-[#8B0000]" : "text-[#8B0000]"
+                isMain ? "text-[#003366]" : "text-[#003366]"
               }`}
-              style={{ lineHeight: "1.8", paddingTop: "0.25rem", paddingBottom: "0.25rem", paddingLeft: "0.5rem" }}
+              style={{
+                lineHeight: "1.8",
+                paddingTop: "0.25rem",
+                paddingBottom: "0.25rem",
+                paddingLeft: "0.5rem",
+              }}
               dangerouslySetInnerHTML={{ __html: event.eventKhmer }}
             />
           </div>

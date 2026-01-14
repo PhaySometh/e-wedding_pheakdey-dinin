@@ -61,8 +61,9 @@ export default function Hero() {
           src="/photos/couple-1.png"
           alt="Couple 1"
           className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
-          style={{ 
-            filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))"
+          style={{
+            filter:
+              "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
         />
       </div>
@@ -73,8 +74,9 @@ export default function Hero() {
           src="/photos/couple-2.png"
           alt="Couple 2"
           className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
-          style={{ 
-            filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))"
+          style={{
+            filter:
+              "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
         />
       </div>
@@ -109,9 +111,9 @@ export default function Hero() {
         <div className="mb-6 md:mb-8 lg:mb-10" id="hero-names">
           {/* First Person */}
           <h2
-            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-khmer-display text-[#8B0000] mb-2"
+            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-khmer-display text-[#003366] mb-2"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.3)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.3)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
@@ -131,9 +133,9 @@ export default function Hero() {
 
           {/* Second Person */}
           <h2
-            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-khmer-display text-[#8B0000] mb-2 mt-6 md:mt-8"
+            className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-khmer-display text-[#003366] mb-2 mt-6 md:mt-8"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.3)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.3)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
@@ -166,16 +168,18 @@ export default function Hero() {
             src="/photos/couple-1.png"
             alt="Couple 1"
             className="w-44 sm:w-56 md:w-64 h-auto object-contain max-w-[45%]"
-            style={{ 
-              filter: "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))"
+            style={{
+              filter:
+                "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))",
             }}
           />
           <img
             src="/photos/couple-2.png"
             alt="Couple 2"
             className="w-44 sm:w-56 md:w-64 h-auto object-contain max-w-[45%]"
-            style={{ 
-              filter: "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))"
+            style={{
+              filter:
+                "drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3))",
             }}
           />
         </div>
@@ -183,7 +187,7 @@ export default function Hero() {
         {/* Date */}
         <div className="mt-8 md:mt-10 lg:mt-12" id="hero-date">
           <div className="inline-block bg-white/80 backdrop-blur-sm px-4 md:px-6 md:py-4 rounded-lg shadow-2xl border-2 border-[#D4AF37]">
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-khmer text-[#8B0000] mb-2">
+            <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-khmer text-[#003366] mb-2">
               ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
             </p>
             <div className="mt-4 pt-4 border-t border-[#D4AF37]">
@@ -199,42 +203,48 @@ export default function Hero() {
           {/* Countdown Button */}
           <button
             onClick={() => {
-              document.getElementById('countdown')?.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+              document.getElementById("countdown")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
               });
             }}
             className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            <span className="text-sm md:text-base font-khmer-display">រាប់ថយក្រោយ</span>
+            <span className="text-sm md:text-base font-khmer-display">
+              រាប់ថយក្រោយ
+            </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </button>
 
           {/* Location/Map Button */}
           <button
             onClick={() => {
-              document.getElementById('location')?.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+              document.getElementById("location")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
               });
             }}
             className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B4513] to-[#A0522D] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            <span className="text-sm md:text-base font-khmer-display">ទីតាំងពិធីមង្គលការ</span>
+            <span className="text-sm md:text-base font-khmer-display">
+              ទីតាំងពិធីមង្គលការ
+            </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </button>
 
           {/* QR Code Button */}
           <button
             onClick={() => {
-              document.getElementById('payment')?.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+              document.getElementById("payment")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
               });
             }}
             className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B0000] to-[#B22222] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            <span className="text-sm md:text-base font-khmer-display">ចំណងដៃ QR Code</span>
+            <span className="text-sm md:text-base font-khmer-display">
+              ចំណងដៃ QR Code
+            </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </button>
         </div>

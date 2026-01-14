@@ -47,7 +47,7 @@ export default function RootLayout({
           href="/photos/initial_text_with_frame.png"
           as="image"
         />
-        <link rel="preload" href="/photos/gate_background.png" as="image" />
+        <link rel="preload" href="/photos/gate_background.JPG" as="image" />
         <link
           rel="preload"
           href="/fonts/Moul.ttf"

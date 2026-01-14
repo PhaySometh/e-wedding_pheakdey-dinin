@@ -41,9 +41,9 @@ export default function PhotoGallery() {
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#8B0000] mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#003366] mb-4 md:mb-6"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)",
               lineHeight: "1.8",
             }}
           >
@@ -96,10 +96,16 @@ export default function PhotoGallery() {
       )}
 
       {/* Decorative elements */}
-      <div className="absolute top-10 left-10 text-4xl text-[#FFD700] opacity-20 animate-pulse" style={{ animationDuration: "3s" }}>
+      <div
+        className="absolute top-10 left-10 text-4xl text-[#FFD700] opacity-20 animate-pulse"
+        style={{ animationDuration: "3s" }}
+      >
         ❀
       </div>
-      <div className="absolute bottom-10 right-10 text-4xl text-[#D4AF37] opacity-20 animate-pulse" style={{ animationDuration: "4s", animationDelay: "1s" }}>
+      <div
+        className="absolute bottom-10 right-10 text-4xl text-[#D4AF37] opacity-20 animate-pulse"
+        style={{ animationDuration: "4s", animationDelay: "1s" }}
+      >
         ❀
       </div>
     </section>

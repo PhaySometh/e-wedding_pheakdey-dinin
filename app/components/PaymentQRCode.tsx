@@ -7,9 +7,9 @@ export default function PaymentQRCode() {
       className="relative min-h-screen section-wrapper flex items-center justify-center"
       style={{
         backgroundImage: `url('/photos/qr-section-background.JPG')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Overlay for better readability */}
@@ -18,10 +18,10 @@ export default function PaymentQRCode() {
       <div className="relative z-10 container text-center fade-in flex flex-col items-center">
         {/* Header */}
         <div className="mb-8 md:mb-12 space-y-3 md:space-y-4 w-full">
-        <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#8B0000] mb-4 md:mb-6"
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#003366] mb-4 md:mb-6"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
@@ -31,7 +31,7 @@ export default function PaymentQRCode() {
           <p
             className="font-khmer text-sm sm:text-base md:text-lg text-[#b8860b] mt-3 md:mt-4 leading-loose"
             style={{ lineHeight: "2" }}
-            >
+          >
             លោកអ្នកអាចផ្តល់ចងដៃមង្គលការ
             <br />
             តាមរយៈ QR Code ខាងក្រោម
@@ -46,7 +46,7 @@ export default function PaymentQRCode() {
           >
             ចំណងដៃខាងកូនកម្លោះ
           </h3>
-          
+
           {/* Groom's Two QR Codes */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 max-w-[50%]">
             {/* ABA Dollar QR Code */}
@@ -77,7 +77,7 @@ export default function PaymentQRCode() {
           >
             ចំណងដៃខាងកូនក្រមុំ
           </h3>
-          
+
           {/* Bride's QR Code - Centered */}
           <div className="flex justify-center max-w-[25%]">
             <div className="qr-card text-center w-full">

@@ -12,10 +12,10 @@ export default function LocationSection() {
       <div className="relative z-10 container-lg text-center fade-in">
         {/* Header */}
         <div className="mb-8 md:mb-12 space-y-3 md:space-y-4">
-        <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#8B0000] mb-4 md:mb-6"
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#003366] mb-4 md:mb-6"
             style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)",
+              textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
@@ -47,20 +47,23 @@ export default function LocationSection() {
 
           {/* Google Map Header - Separate */}
           <div className="text-center mb-6 md:mb-8">
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#8B0000] mb-4 md:mb-6"
-            style={{
-              textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)",
-              lineHeight: "1.8",
-              padding: "0.5rem 0",
-            }}
-          >
-            ផែនទីនៅលើ Google Maps
-          </h2>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-khmer-display text-[#003366] mb-4 md:mb-6"
+              style={{
+                textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)",
+                lineHeight: "1.8",
+                padding: "0.5rem 0",
+              }}
+            >
+              ផែនទីនៅលើ Google Maps
+            </h2>
           </div>
 
           {/* Google Map - No Container */}
-          <div className="map-container relative w-full overflow-hidden rounded-lg shadow-2xl" style={{ paddingBottom: "56.25%" }}>
+          <div
+            className="map-container relative w-full overflow-hidden rounded-lg shadow-2xl"
+            style={{ paddingBottom: "56.25%" }}
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5901.799446485226!2d104.9480299762391!3d11.676385095157785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDQwJzMyLjYiTiAxMDTCsDU3JzA2LjUiRQ!5e0!3m2!1sen!2skh!4v1768289855200!5m2!1sen!2skh"
               className="absolute top-0 left-0 w-full h-full"
@@ -79,7 +82,10 @@ export default function LocationSection() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center justify-center rounded-lg md:rounded-xl shadow-lg border-2 border-[#D4AF37] bg-white px-2 sm:px-4 md:px-6 lg:px-8 py-1 sm:py-2 md:py-3 lg:py-4 hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg font-khmer font-bold text-[#8B4513] text-center" style={{ lineHeight: "1.6" }}>
+              <p
+                className="text-xs sm:text-sm md:text-base lg:text-lg font-khmer font-bold text-[#8B4513] text-center"
+                style={{ lineHeight: "1.6" }}
+              >
                 ទទួលបានការណែនាំផ្លូវទៅគេហដ្ឋានខាងស្រី
               </p>
             </a>

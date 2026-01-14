@@ -13,9 +13,9 @@ export default function FlipClockCountdownSection() {
       className="relative min-h-screen section-wrapper flex items-center justify-center"
       style={{
         backgroundImage: `url('/photos/countdown-section-background.JPG')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Overlay for better readability */}
@@ -41,21 +41,22 @@ export default function FlipClockCountdownSection() {
             to={weddingDate}
             labels={["ថ្ងៃ", "ម៉ោង", "នាទី", "វិនាទី"]}
             labelStyle={{
-              fontSize: "clamp(0.7rem, 2vw, 1rem)",
+              fontSize: "clamp(0.5rem, 2vw, 1rem)",
               fontWeight: 500,
               color: "#b8860b",
               textTransform: "uppercase",
-              marginTop: "0.5rem",
+              marginTop: "0.3rem",
             }}
             digitBlockStyle={{
-              width: "clamp(2.5rem, 8vw, 4rem)",
-              height: "clamp(3.5rem, 10vw, 6rem)",
-              fontSize: "clamp(1.5rem, 5vw, 3rem)",
-              background: "linear-gradient(180deg, #3a3a3a 0%, #2c2c2c 50%, #1a1a1a 100%)",
+              width: "clamp(1.4rem, 8vw, 4rem)",
+              height: "clamp(1.9rem, 10vw, 6rem)",
+              fontSize: "clamp(0.8rem, 5vw, 3rem)",
+              background:
+                "linear-gradient(180deg, #3a3a3a 0%, #2c2c2c 50%, #1a1a1a 100%)",
               color: "#ffffff",
             }}
             dividerStyle={{ color: "#D4AF37", height: "1px" }}
-            separatorStyle={{ color: "#D4AF37", size: "clamp(4px, 1vw, 8px)" }}
+            separatorStyle={{ color: "#D4AF37", size: "clamp(2px, 1vw, 8px)" }}
             duration={0.5}
           />
         </div>
@@ -75,30 +76,30 @@ export default function FlipClockCountdownSection() {
           width: 100%;
           padding: 0 1rem;
         }
-        
+
         .flip-clock-wrapper > div {
           max-width: 100%;
         }
-        
+
         /* Ensure proper scaling on all devices */
         .flip-clock-wrapper .flip-clock {
           max-width: 100%;
         }
-        
+
         /* Fine-tune for very small screens */
         @media (max-width: 320px) {
           .flip-clock-wrapper {
             padding: 0 0.5rem;
           }
         }
-        
+
         /* Fine-tune for medium screens */
         @media (min-width: 768px) and (max-width: 1024px) {
           .flip-clock-wrapper {
             padding: 0 2rem;
           }
         }
-        
+
         /* Fine-tune for large screens */
         @media (min-width: 1024px) {
           .flip-clock-wrapper {

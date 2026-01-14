@@ -192,7 +192,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
         className="absolute inset-0 flex items-center justify-center pointer-events-none w-full h-full"
       >
         <img
-          src="/photos/gate_background.png"
+          src="/photos/gate_background.JPG"
           alt="Gate Background"
           className="w-full h-full object-contain"
           onLoad={() => console.log("Gate background loaded successfully")}
@@ -228,10 +228,11 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
           <p
             ref={namesRef}
             id="gate-names"
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-khmer-display text-[#8B0000] opacity-0"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-khmer-display text-white opacity-0"
             style={{
               textShadow:
-                "0 3px 15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6)",
+                "0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 51, 102, 0.8), 0 0 30px rgba(0, 51, 102, 0.6), 2px 2px 4px rgba(0, 0, 0, 1)",
+              WebkitTextStroke: "0.5px rgba(0, 51, 102, 0.5)",
               lineHeight: "1.8",
               padding: "0.5rem 0",
             }}
@@ -264,16 +265,18 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
         {/* Bottom Section: Button and Event Details */}
         <div className="flex justify-between flex-col text-center">
           {/* Open Button */}
-          <button
-            ref={buttonRef}
-            id="open-gate-btn"
-            onClick={handleOpenGate}
-            className="group relative bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] hover:from-[#D4AF37] hover:to-[#8B6914] text-white font-khmer text-base sm:text-xl md:text-2xl lg:text-3xl px-2 sm:px-4 md:px-6 lg:px-8 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-3xl border-4 border-white/50 opacity-0"
-            style={{ lineHeight: "1.8" }}
-          >
-            <span className="relative z-10 font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl inline-block px-2">បើកធៀបការ</span>
-            <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+          <div className="flex justify-center">
+            <button
+              ref={buttonRef}
+              id="open-gate-btn"
+              onClick={handleOpenGate}
+              className="group relative bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] hover:from-[#D4AF37] hover:to-[#8B6914] text-white font-khmer font-bold text-lg md:text-xl px-4 py-2 rounded-lg shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl border-2 border-white/50 opacity-0"
+              style={{ lineHeight: "1.2" }}
+            >
+              <span className="relative z-10">បើកធៀបការ</span>
+              <div className="absolute inset-0 rounded-lg bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+          </div>
 
           {/* Event Information */}
           <div

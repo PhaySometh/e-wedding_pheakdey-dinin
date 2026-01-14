@@ -46,8 +46,8 @@ export default function Footer() {
         {/* Main Thank You Message */}
         <div className="text-center mb-8 fade-in">
           <h2
-            className="copy-block text-3xl md:text-5xl font-khmer-display text-[#8B0000] mb-4"
-            style={{ textShadow: "0 2px 8px rgba(139, 0, 0, 0.2)" }}
+            className="copy-block text-3xl md:text-5xl font-khmer-display text-[#003366] mb-4"
+            style={{ textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)" }}
           >
             សូមអរគុណ
           </h2>
@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="inline-block">
             <div className="flex items-center justify-center space-x-4 md:space-x-6">
               <div className="text-right">
-                <p className="text-xl md:text-2xl font-khmer-display text-[#8B0000]">
+                <p className="text-xl md:text-2xl font-khmer-display text-[#003366]">
                   ភក្តី
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function Footer() {
               <div className="text-3xl md:text-4xl text-[#D4AF37]">❖</div>
 
               <div className="text-left">
-                <p className="text-xl md:text-2xl font-khmer-display text-[#8B0000]">
+                <p className="text-xl md:text-2xl font-khmer-display text-[#003366]">
                   ឌីនីន
                 </p>
               </div>
@@ -82,7 +82,7 @@ export default function Footer() {
         {/* Date Reminder */}
         <div className="text-center mb-8 fade-in">
           <div className="inline-block bg-white/80 backdrop-blur-sm px-6 md:px-8 py-4 rounded-lg border-2 border-[#D4AF37] shadow-lg">
-            <p className="text-base md:text-lg font-khmer text-[#8B0000] mb-1">
+            <p className="text-base md:text-lg font-khmer text-[#003366] mb-1">
               ថ្ងៃសុក្រ ទី២៧ ខែកុម្ភៈ ឆ្នាំ២០២៦
             </p>
             <p className="text-sm md:text-base font-eng text-[#8B4513]">
