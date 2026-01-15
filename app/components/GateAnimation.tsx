@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 
 interface GateAnimationProps {
@@ -191,15 +192,17 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
         id="gate-background"
         className="absolute inset-0 flex items-center justify-center pointer-events-none w-full h-full"
       >
-        <img
+        <Image
           src="/photos/gate_background_1.jpg"
           alt="Gate Background"
-          className="w-full h-full object-contain"
-          onLoad={() => console.log("Gate background loaded successfully")}
-          onError={(e) => {
-            console.error("Failed to load gate background image");
-            e.currentTarget.style.display = "none";
-          }}
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+          quality={85}
+          onLoadingComplete={() =>
+            console.log("Gate background loaded successfully")
+          }
         />
       </div>
 
@@ -246,15 +249,16 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
             id="gate-monogram"
             className="mt-4 md:mt-6 lg:mt-8 mb-4 md:mb-6 lg:mb-8 flex justify-center items-center w-full opacity-0"
           >
-            <img
+            <Image
               src="/photos/initial_text_with_frame.png"
               alt="Couple Monogram"
+              width={320}
+              height={320}
               className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain drop-shadow-2xl"
               style={{
                 filter: "drop-shadow(0 0 30px rgba(212, 175, 55, 0.5))",
               }}
-              width={320}
-              height={320}
+              priority
             />
           </div>
         </div>

@@ -98,6 +98,24 @@
     font-family: "Google Sans", system-ui, sans-serif;
   }
 
+  /* Performance optimizations for animations */
+  .will-animate {
+    will-change: transform, opacity;
+  }
+
+  .will-animate-transform {
+    will-change: transform;
+  }
+
+  .will-animate-opacity {
+    will-change: opacity;
+  }
+
+  /* Disable will-change after animations to save memory */
+  .animate-complete {
+    will-change: auto;
+  }
+
   .font-koulen {
     font-family: "Koulen", sans-serif;
   }
@@ -193,7 +211,13 @@ img {
 }
 
 /* Prevent text from causing overflow */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
@@ -344,34 +368,34 @@ iframe {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;   /* 16px mobile */
+  padding-left: 1rem; /* 16px mobile */
   padding-right: 1rem;
 }
 
 @media (min-width: 640px) {
   .container {
-    padding-left: 1.5rem;  /* 24px tablet */
+    padding-left: 1.5rem; /* 24px tablet */
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-left: 2rem;    /* 32px desktop */
+    padding-left: 2rem; /* 32px desktop */
     padding-right: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding-left: 3rem;    /* 48px large desktop */
+    padding-left: 3rem; /* 48px large desktop */
     padding-right: 3rem;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
-    padding-left: 4rem;    /* 64px xl desktop */
+    padding-left: 4rem; /* 64px xl desktop */
     padding-right: 4rem;
   }
 }
@@ -493,27 +517,27 @@ iframe {
 /* Section wrapper for consistent vertical spacing */
 .section-wrapper {
   width: 100%;
-  padding-top: 3rem;     /* 48px mobile */
+  padding-top: 3rem; /* 48px mobile */
   padding-bottom: 3rem;
 }
 
 @media (min-width: 640px) {
   .section-wrapper {
-    padding-top: 4rem;   /* 64px tablet */
+    padding-top: 4rem; /* 64px tablet */
     padding-bottom: 4rem;
   }
 }
 
 @media (min-width: 768px) {
   .section-wrapper {
-    padding-top: 5rem;   /* 80px desktop */
+    padding-top: 5rem; /* 80px desktop */
     padding-bottom: 5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-wrapper {
-    padding-top: 6rem;   /* 96px large desktop */
+    padding-top: 6rem; /* 96px large desktop */
     padding-bottom: 6rem;
   }
 }

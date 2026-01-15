@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function LocationSection() {
   return (
     <section
@@ -38,10 +40,13 @@ export default function LocationSection() {
         <div className="space-y-8 md:space-y-12">
           {/* Physical Map (Drawn Map) - No Container */}
           <div className="map-image-container overflow-hidden flex justify-center">
-            <img
+            <Image
               src="/photos/physical_map.jpg"
               alt="Hand-drawn wedding venue map"
+              width={384}
+              height={512}
               className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-104 max-w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
             />
           </div>
 

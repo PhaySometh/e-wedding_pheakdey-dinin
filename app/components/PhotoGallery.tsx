@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -74,10 +75,13 @@ export default function PhotoGallery() {
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer aspect-[3/4]"
               onClick={() => setSelectedImage(photo.src)}
             >
-              <img
+              <Image
                 src={photo.src}
                 alt={photo.alt}
+                fill
+                loading="lazy"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               {/* Overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -98,11 +102,14 @@ export default function PhotoGallery() {
           >
             ×
           </button>
-          <img
+          <Image
             src={selectedImage}
             alt="Enlarged photo"
+            width={1200}
+            height={1600}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            priority
           />
         </div>
       )}

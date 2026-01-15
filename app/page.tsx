@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,14 +9,31 @@ import GateAnimation from "./components/GateAnimation";
 import Hero from "./components/Hero";
 import InvitationCard from "./components/InvitationCard";
 import FlipClockCountdown from "./components/FlipClockCountdown";
-import PaymentQRCode from "./components/PaymentQRCode";
-import PhotoGallery from "./components/PhotoGallery";
-import LocationSection from "./components/LocationSection";
-import Timeline from "./components/Timeline";
-import GratitudeApology from "./components/GratitudeApology";
-import Footer from "./components/Footer";
 import BackToTopButton from "./components/BackToTopButton";
-import MusicPlayer from "./components/MusicPlayer";
+
+// Lazy load heavy components
+const PaymentQRCode = dynamic(() => import("./components/PaymentQRCode"), {
+  loading: () => null,
+});
+const PhotoGallery = dynamic(() => import("./components/PhotoGallery"), {
+  loading: () => null,
+});
+const LocationSection = dynamic(() => import("./components/LocationSection"), {
+  loading: () => null,
+});
+const Timeline = dynamic(() => import("./components/Timeline"), {
+  loading: () => null,
+});
+const GratitudeApology = dynamic(
+  () => import("./components/GratitudeApology"),
+  { loading: () => null }
+);
+const Footer = dynamic(() => import("./components/Footer"), {
+  loading: () => null,
+});
+const MusicPlayer = dynamic(() => import("./components/MusicPlayer"), {
+  loading: () => null,
+});
 
 export default function Home() {
   const [isGateOpen, setIsGateOpen] = useState(false);
@@ -112,20 +130,17 @@ export default function Home() {
     <>
       {/* Gate Animation */}
       {showGate && (
-        <GateAnimation 
+        <GateAnimation
           onGateOpened={() => {
             setIsGateOpen(true);
             // Hide gate after a short delay to allow animation to complete
             setTimeout(() => setShowGate(false), 1500);
-          }} 
+          }}
         />
       )}
 
       {/* Main Content */}
-      <main
-        id="main-content"
-        className="opacity-0"
-      >
+      <main id="main-content" className="opacity-0">
         {/* Hero Section */}
         <Hero />
 

@@ -5,79 +5,71 @@ import { useEffect, useRef, useState } from "react";
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const hasTriedAutoplay = useRef(false);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Try to autoplay when component mounts
-    const playAudio = async () => {
-      if (hasTriedAutoplay.current) return;
-      hasTriedAutoplay.current = true;
+    // Defer audio playback until after initial page load (1500ms delay for better performance)
+    const playbackDelay = setTimeout(() => {
+      const playAudio = async () => {
+        if (hasTriedAutoplay.current) return;
+        hasTriedAutoplay.current = true;
 
-      try {
-        // Start muted to allow autoplay, then unmute
-        audio.muted = true;
-        await audio.play();
-        // Unmute after successful play
-        audio.muted = false;
-        setIsPlaying(true);
-      } catch (error) {
-        // Autoplay was prevented by browser, user needs to interact first
-        console.log("Autoplay prevented, waiting for user interaction");
-        setIsPlaying(false);
-        audio.muted = false;
-      }
-    };
+        try {
+          audio.muted = true;
+          await audio.play();
+          audio.muted = false;
+          setIsPlaying(true);
+        } catch (error) {
+          console.log("Autoplay prevented, waiting for user interaction");
+          setIsPlaying(false);
+          audio.muted = false;
+        }
+      };
 
-    // Wait a bit for the audio to load
-    const handleCanPlay = () => {
-      setIsLoaded(true);
-      playAudio();
-    };
+      const handleCanPlay = () => {
+        playAudio();
+      };
 
-    audio.addEventListener("canplay", handleCanPlay);
+      audio.addEventListener("canplay", handleCanPlay, { once: true });
 
-    // Handle audio ended (shouldn't happen with loop, but just in case)
-    const handleEnded = () => {
-      audio.play();
-    };
+      const handleFirstInteraction = () => {
+        const audio = audioRef.current;
+        if (audio && audio.paused) {
+          audio.muted = false;
+          audio
+            .play()
+            .then(() => {
+              setIsPlaying(true);
+            })
+            .catch(() => {
+              console.log("Could not start playback");
+            });
+        }
+      };
 
-    audio.addEventListener("ended", handleEnded);
+      document.addEventListener("click", handleFirstInteraction, {
+        once: true,
+      });
+      document.addEventListener("touchstart", handleFirstInteraction, {
+        once: true,
+      });
+      document.addEventListener("keydown", handleFirstInteraction, {
+        once: true,
+      });
 
-    // Try to play on any user interaction if autoplay was blocked
-    const handleFirstInteraction = () => {
-      if (audio.paused) {
-        audio.muted = false;
-        audio
-          .play()
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(() => {
-            console.log("Could not start playback");
-          });
-      }
-    };
+      return () => {
+        clearTimeout(playbackDelay);
+        audio.removeEventListener("canplay", handleCanPlay);
+        document.removeEventListener("click", handleFirstInteraction);
+        document.removeEventListener("touchstart", handleFirstInteraction);
+        document.removeEventListener("keydown", handleFirstInteraction);
+      };
+    }, 1500);
 
-    document.addEventListener("click", handleFirstInteraction, { once: true });
-    document.addEventListener("touchstart", handleFirstInteraction, {
-      once: true,
-    });
-    document.addEventListener("keydown", handleFirstInteraction, {
-      once: true,
-    });
-
-    return () => {
-      audio.pause();
-      audio.removeEventListener("canplay", handleCanPlay);
-      audio.removeEventListener("ended", handleEnded);
-      document.removeEventListener("click", handleFirstInteraction);
-      document.removeEventListener("touchstart", handleFirstInteraction);
-      document.removeEventListener("keydown", handleFirstInteraction);
-    };
+    return () => clearTimeout(playbackDelay);
   }, []);
 
   const toggleMusic = async () => {
@@ -99,12 +91,12 @@ export default function MusicPlayer() {
 
   return (
     <>
-      {/* Hidden audio element */}
+      {/* Hidden audio element - deferred loading for performance */}
       <audio
         ref={audioRef}
         src="/music/Neena_Goh_-_Beautiful_in_White_Instrumental_(mp3.pm).mp3"
         loop
-        preload="auto"
+        preload="none"
       />
 
       {/* Music control button */}

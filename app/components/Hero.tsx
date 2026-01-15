@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -57,27 +59,33 @@ export default function Hero() {
 
       {/* Floating Couple Images - Left Side (Desktop only) */}
       <div className="hidden lg:block absolute left-4 xl:left-8 top-1/2 -translate-y-1/2 z-20">
-        <img
+        <Image
           src="/photos/couple-1.png"
           alt="Couple 1"
+          width={384}
+          height={512}
           className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
           style={{
             filter:
               "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
+          priority
         />
       </div>
 
       {/* Floating Couple Images - Right Side (Desktop only) */}
       <div className="hidden lg:block absolute right-4 xl:right-8 top-1/2 -translate-y-1/2 z-20">
-        <img
+        <Image
           src="/photos/couple-2.png"
           alt="Couple 2"
+          width={384}
+          height={512}
           className="w-80 xl:w-96 2xl:w-104 h-auto object-contain"
           style={{
             filter:
               "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
+          priority
         />
       </div>
 
@@ -99,10 +107,13 @@ export default function Hero() {
         {/* Monogram/Logo Image */}
         <div className="my-6 md:my-8 lg:my-10 xl:my-12" id="hero-monogram">
           <div className="inline-block relative">
-            <img
+            <Image
               src="/photos/initial_text_with_frame.png"
               alt="Couple Monogram"
+              width={224}
+              height={224}
               className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mx-auto object-contain drop-shadow-2xl"
+              priority
             />
           </div>
         </div>
