@@ -7,28 +7,40 @@ export default function PhotoGallery() {
 
   const photos = [
     {
-      src: "/photos/display-img-1.JPG",
+      src: "/photos/display-img-1.jpg",
       alt: "Couple Photo 1",
     },
     {
-      src: "/photos/display-img-2.JPG",
+      src: "/photos/display-img-2.jpg",
       alt: "Couple Photo 2",
     },
     {
-      src: "/photos/display-img-3.JPG",
+      src: "/photos/display-img-3.jpg",
       alt: "Couple Photo 3",
     },
     {
-      src: "/photos/display-img-4.JPG",
+      src: "/photos/display-img-4.jpg",
       alt: "Couple Photo 4",
     },
     {
-      src: "/photos/display-img-5.JPG",
+      src: "/photos/display-img-5.jpg",
       alt: "Couple Photo 5",
     },
     {
-      src: "/photos/display-img-6.JPG",
+      src: "/photos/display-img-6.jpg",
       alt: "Couple Photo 6",
+    },
+    {
+      src: "/photos/display-img-7.jpg",
+      alt: "Couple Photo 7",
+    },
+    {
+      src: "/photos/display-img-8.jpg",
+      alt: "Couple Photo 8",
+    },
+    {
+      src: "/photos/display-img-9.jpg",
+      alt: "Couple Photo 9",
     },
   ];
 

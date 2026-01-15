@@ -192,7 +192,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
         className="absolute inset-0 flex items-center justify-center pointer-events-none w-full h-full"
       >
         <img
-          src="/photos/gate_background.JPG"
+          src="/photos/gate_background_1.jpg"
           alt="Gate Background"
           className="w-full h-full object-contain"
           onLoad={() => console.log("Gate background loaded successfully")}

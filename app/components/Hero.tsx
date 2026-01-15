@@ -199,7 +199,7 @@ export default function Hero() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="mt-12 md:mt-16 flex flex-row gap-3 md:gap-4 justify-center items-center">
+        <div className="mt-8 sm:mt-12 md:mt-16 flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center items-center">
           {/* Countdown Button */}
           <button
             onClick={() => {
@@ -208,9 +208,9 @@ export default function Hero() {
                 block: "start",
               });
             }}
-            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="group relative px-2 sm:px-3 md:px-5 py-1.5 sm:py-2 md:py-3 bg-gradient-to-r from-[#003366] to-[#004d99] text-white rounded-md md:rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-xs sm:text-sm md:text-base"
           >
-            <span className="text-sm md:text-base font-khmer-display">
+            <span className="font-khmer-display whitespace-nowrap">
               រាប់ថយក្រោយ
             </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -224,9 +224,9 @@ export default function Hero() {
                 block: "start",
               });
             }}
-            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B4513] to-[#A0522D] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="group relative px-2 sm:px-3 md:px-5 py-1.5 sm:py-2 md:py-3 bg-gradient-to-r from-[#003366] to-[#004d99] text-white rounded-md md:rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-xs sm:text-sm md:text-base"
           >
-            <span className="text-sm md:text-base font-khmer-display">
+            <span className="font-khmer-display whitespace-nowrap">
               ទីតាំងពិធីមង្គលការ
             </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -240,9 +240,9 @@ export default function Hero() {
                 block: "start",
               });
             }}
-            className="group relative px-4 md:px-5 py-2 md:py-3 bg-gradient-to-r from-[#8B0000] to-[#B22222] text-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="group relative px-2 sm:px-3 md:px-5 py-1.5 sm:py-2 md:py-3 bg-gradient-to-r from-[#003366] to-[#004d99] text-white rounded-md md:rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-xs sm:text-sm md:text-base"
           >
-            <span className="text-sm md:text-base font-khmer-display">
+            <span className="font-khmer-display whitespace-nowrap">
               ចំណងដៃ QR Code
             </span>
             <div className="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />

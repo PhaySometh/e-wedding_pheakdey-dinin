@@ -6,7 +6,7 @@ export default function PaymentQRCode() {
       id="payment"
       className="relative min-h-screen section-wrapper flex items-center justify-center"
       style={{
-        backgroundImage: `url('/photos/qr-section-background.JPG')`,
+        backgroundImage: `url('/photos/qr-section-background.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -2,8 +2,18 @@
 
 export default function Footer() {
   return (
-    <footer className="relative section-wrapper bg-gradient-to-b from-[#FFF8DC] to-[#D4AF37]/30 border-t-4 border-[#D4AF37] flex flex-col items-center justify-center">
-      <div className="container flex flex-col items-center">
+    <footer className="relative section-wrapper border-t-4 border-[#D4AF37] flex flex-col items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/photos/footer-section-background.jpg')",
+        }}
+      />
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20" />
+
+      <div className="container flex flex-col items-center relative z-10">
         {/* Decorative Top */}
         <div className="text-center mb-8 fade-in">
           <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
@@ -46,13 +56,18 @@ export default function Footer() {
         {/* Main Thank You Message */}
         <div className="text-center mb-8 fade-in">
           <h2
-            className="copy-block text-3xl md:text-5xl font-khmer-display text-[#003366] mb-4"
-            style={{ textShadow: "0 2px 8px rgba(0, 51, 102, 0.2)" }}
+            className="copy-block text-3xl md:text-5xl font-khmer-display text-white mb-4"
+            style={{
+              textShadow:
+                "0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 51, 102, 0.8), 0 0 30px rgba(0, 51, 102, 0.6), 2px 2px 4px rgba(0, 0, 0, 1)",
+              WebkitTextStroke: "0.5px rgba(0, 51, 102, 0.5)",
+              lineHeight: "1.8",
+            }}
           >
             សូមអរគុណ
           </h2>
           <div className="flex flex-col items-center gap-3">
-            <p className="copy-block text-base md:text-lg font-khmer text-[#8B4513] leading-relaxed">
+            <p className="copy-block text-base md:text-lg font-khmer text-white leading-relaxed">
               ការចូលរួមរបស់លោកអ្នក នឹងធ្វើឱ្យថ្ងៃរបស់យើងកាន់តែពិសេស
             </p>
           </div>
@@ -63,7 +78,15 @@ export default function Footer() {
           <div className="inline-block">
             <div className="flex items-center justify-center space-x-4 md:space-x-6">
               <div className="text-right">
-                <p className="text-xl md:text-2xl font-khmer-display text-[#003366]">
+                <p
+                  className="text-xl md:text-2xl font-khmer-display text-white"
+                  style={{
+                    textShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 51, 102, 0.8), 0 0 30px rgba(0, 51, 102, 0.6), 2px 2px 4px rgba(0, 0, 0, 1)",
+                    WebkitTextStroke: "0.5px rgba(0, 51, 102, 0.5)",
+                    lineHeight: "1.8",
+                  }}
+                >
                   ភក្តី
                 </p>
               </div>
@@ -71,7 +94,15 @@ export default function Footer() {
               <div className="text-3xl md:text-4xl text-[#D4AF37]">❖</div>
 
               <div className="text-left">
-                <p className="text-xl md:text-2xl font-khmer-display text-[#003366]">
+                <p
+                  className="text-xl md:text-2xl font-khmer-display text-white"
+                  style={{
+                    textShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 51, 102, 0.8), 0 0 30px rgba(0, 51, 102, 0.6), 2px 2px 4px rgba(0, 0, 0, 1)",
+                    WebkitTextStroke: "0.5px rgba(0, 51, 102, 0.5)",
+                    lineHeight: "1.8",
+                  }}
+                >
                   ឌីនីន
                 </p>
               </div>
@@ -95,7 +126,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright/Credits */}
-        <div className="text-center text-xs md:text-sm text-[#8B4513] opacity-70 fade-in">
+        <div className="text-center text-xs md:text-sm text-white fade-in">
           <p className="font-eng mb-1">With Love, Pheakdey & Dinin © 2026</p>
           <p className="font-eng">Phnom Penh, Cambodia</p>
         </div>

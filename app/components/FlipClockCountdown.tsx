@@ -12,7 +12,7 @@ export default function FlipClockCountdownSection() {
       id="countdown"
       className="relative min-h-screen section-wrapper flex items-center justify-center"
       style={{
-        backgroundImage: `url('/photos/countdown-section-background.JPG')`,
+        backgroundImage: `url('/photos/countdown-section-background.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
