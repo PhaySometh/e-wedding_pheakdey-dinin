@@ -141,7 +141,9 @@ export default function Hero() {
           {/* Divider */}
           <div className="flex items-center justify-center my-6 md:my-8">
             <div className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]" />
-            <span className="mx-3 text-2xl md:text-3xl text-[#D4AF37]">❖</span>
+            <span className="mx-3 text-2xl md:text-3xl text-[#D4AF37]">
+              ជាគូនឹង
+            </span>
             <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-[#D4AF37]" />
           </div>
 
