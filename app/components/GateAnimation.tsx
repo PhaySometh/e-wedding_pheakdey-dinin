@@ -200,7 +200,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
           priority
           sizes="100vw"
           quality={85}
-          onLoadingComplete={() =>
+          onLoad={() =>
             console.log("Gate background loaded successfully")
           }
         />
