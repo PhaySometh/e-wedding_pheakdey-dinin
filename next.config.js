@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
   images: {
     unoptimized: false,
     formats: ["image/avif", "image/webp"],
@@ -10,6 +9,7 @@ const nextConfig = {
     ],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
     remotePatterns: [],
+    quality: 80,
   },
   compress: true,
   poweredByHeader: false,
