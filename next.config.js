@@ -9,7 +9,6 @@ const nextConfig = {
     ],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
     remotePatterns: [],
-    quality: 80,
   },
   compress: true,
   poweredByHeader: false,
