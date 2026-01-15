@@ -47,6 +47,8 @@ export default function LocationSection() {
               height={512}
               className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-104 max-w-full h-auto rounded-lg shadow-lg"
               loading="lazy"
+              quality={80}
+              priority={false}
             />
           </div>
 

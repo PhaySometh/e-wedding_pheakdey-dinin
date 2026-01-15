@@ -70,6 +70,7 @@ export default function Hero() {
               "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
           priority
+          quality={85}
         />
       </div>
 
@@ -86,6 +87,7 @@ export default function Hero() {
               "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
           }}
           priority
+          quality={85}
         />
       </div>
 
@@ -114,6 +116,7 @@ export default function Hero() {
               height={224}
               className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mx-auto object-contain drop-shadow-2xl"
               priority
+              quality={85}
             />
           </div>
         </div>

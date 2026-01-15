@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 export default function PhotoGallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const photos = [
     {
       src: "/photos/display-img-1.jpg",
@@ -67,52 +66,29 @@ export default function PhotoGallery() {
           </p>
         </div>
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer aspect-[3/4]"
-              onClick={() => setSelectedImage(photo.src)}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                loading="lazy"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-          ))}
-        </div>
+        {/* Photo Grid with PhotoProvider */}
+        <PhotoProvider>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            {photos.map((photo, index) => (
+              <PhotoView key={index} src={photo.src}>
+                <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer aspect-[3/4]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    loading="lazy"
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={80}
+                  />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </PhotoView>
+            ))}
+          </div>
+        </PhotoProvider>
       </div>
-
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-[#FFD700] transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
-            ×
-          </button>
-          <Image
-            src={selectedImage}
-            alt="Enlarged photo"
-            width={1200}
-            height={1600}
-            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-            priority
-          />
-        </div>
-      )}
 
       {/* Decorative elements */}
       <div

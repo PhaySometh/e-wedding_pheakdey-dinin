@@ -259,6 +259,7 @@ export default function GateAnimation({ onGateOpened }: GateAnimationProps) {
                 filter: "drop-shadow(0 0 30px rgba(212, 175, 55, 0.5))",
               }}
               priority
+              quality={85}
             />
           </div>
         </div>
